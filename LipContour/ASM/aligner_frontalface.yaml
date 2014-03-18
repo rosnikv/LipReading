@@ -1,0 +1,5428 @@
+# Boosted Regression Active Shape Model
+---
+num_points: 20
+max_iterations: 10
+step_size: 0.5
+image_size: [60, 60]
+patch_size: [24, 24]
+features:
+- name: left eye (center)
+  mean_position: {x: 18.766, y: 22.999}
+  basis_vectors:
+  - {x: -0.014, y: 0.063}
+  - {x: -0.073, y: -0.159}
+  - {x: 0.030, y: 0.212}
+  - {x: -0.180, y: 0.085}
+  - {x: 0.151, y: 0.056}
+  - {x: -0.132, y: 0.131}
+  - {x: -0.179, y: -0.090}
+  - {x: -0.068, y: 0.033}
+  - {x: 0.004, y: -0.041}
+  - {x: -0.065, y: 0.100}
+  - {x: -0.067, y: -0.010}
+  - {x: -0.018, y: 0.085}
+  - {x: 0.034, y: -0.056}
+  - {x: 0.000, y: -0.088}
+  - {x: -0.058, y: 0.169}
+  locator:
+    x:
+    - image_feature:
+        type: haar_diag
+        rect: [10, 10, 4, 14]
+      thresholds: [14.634]
+      coefficients: [0.331721, -0.238650]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 7, 4, 10]
+      thresholds: [66.489]
+      coefficients: [0.117123, -0.300141]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 7, 6, 11]
+      thresholds: [-269.892]
+      coefficients: [-0.196081, 0.097024]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 6, 4, 7]
+      thresholds: [-49.481]
+      coefficients: [-0.106179, 0.169846]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 10, 4, 12]
+      thresholds: [-81.491]
+      coefficients: [0.215533, -0.051144]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 0, 4, 16]
+      thresholds: [-65.855]
+      coefficients: [-0.051912, 0.130703]
+    - image_feature:
+        type: haar_horiz2
+        rect: [22, 12, 2, 3]
+      thresholds: [-16.046]
+      coefficients: [-0.109610, 0.056134]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 2, 6, 7]
+      thresholds: [-270.225]
+      coefficients: [0.164473, -0.028778]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 13, 4, 2]
+      thresholds: [65.850]
+      coefficients: [0.022679, -0.181367]
+    - image_feature:
+        type: haar_horiz2
+        rect: [22, 3, 2, 7]
+      thresholds: [6.915]
+      coefficients: [-0.050637, 0.075315]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 5, 4, 17]
+      thresholds: [-44.821]
+      coefficients: [0.100589, -0.031423]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 0, 6, 18]
+      thresholds: [151.195]
+      coefficients: [-0.020972, 0.150491]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 4, 16, 14]
+      thresholds: [-2149.417]
+      coefficients: [-0.488714, 0.005485]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 16, 14, 8]
+      thresholds: [2.116]
+      coefficients: [-0.074808, 0.030796]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 0, 8, 12]
+      thresholds: [30.974]
+      coefficients: [0.018060, -0.119262]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 5, 2, 9]
+      thresholds: [-25.370]
+      coefficients: [0.100891, -0.017302]
+    - image_feature:
+        type: haar_horiz2
+        rect: [19, 4, 4, 4]
+      thresholds: [0.206]
+      coefficients: [-0.021461, 0.075167]
+    - image_feature:
+        type: haar_horiz3
+        rect: [18, 11, 6, 3]
+      thresholds: [843.801]
+      coefficients: [-0.021450, 0.067538]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 15, 2, 6]
+      thresholds: [-93.016]
+      coefficients: [-0.107017, 0.014651]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 8, 7, 16]
+      thresholds: [-455.843]
+      coefficients: [-0.010813, 0.116671]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 2, 14, 18]
+      thresholds: [-477.320]
+      coefficients: [0.008811, -0.138298]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 1, 2, 17]
+      thresholds: [213.391]
+      coefficients: [0.001913, -0.551667]
+    - image_feature:
+        type: haar_vert3
+        rect: [21, 16, 2, 3]
+      thresholds: [196.543]
+      coefficients: [-0.053706, 0.019732]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 11, 2, 10]
+      thresholds: [13.587]
+      coefficients: [0.026148, -0.040248]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 9, 20, 5]
+      thresholds: [3322.921]
+      coefficients: [0.010388, -0.095715]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 9, 15, 6]
+      thresholds: [-367.330]
+      coefficients: [0.483474, -0.385165]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 10, 9, 6]
+      thresholds: [-26.564]
+      coefficients: [0.167464, -0.549775]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 3, 9, 14]
+      thresholds: [-46.857]
+      coefficients: [0.352408, -0.136237]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 13, 15, 10]
+      thresholds: [-922.082]
+      coefficients: [-0.155524, 0.243306]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 0, 16, 4]
+      thresholds: [177.778]
+      coefficients: [-0.085941, 0.275986]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 12, 15, 4]
+      thresholds: [130.510]
+      coefficients: [0.030360, -0.672199]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 7, 2, 8]
+      thresholds: [-189.856]
+      coefficients: [0.347526, -0.041131]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 14, 5, 10]
+      thresholds: [-689.548]
+      coefficients: [-0.263500, 0.043310]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 1, 5, 8]
+      thresholds: [-2.576]
+      coefficients: [-0.174979, 0.051310]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 12, 11, 12]
+      thresholds: [-1367.858]
+      coefficients: [-0.085829, 0.069412]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 9, 2, 2]
+      thresholds: [-16.488]
+      coefficients: [0.150781, -0.034365]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 6, 4, 5]
+      thresholds: [-109.406]
+      coefficients: [0.211169, -0.021054]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 13, 11, 4]
+      thresholds: [203.614]
+      coefficients: [0.005374, -0.749034]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 3, 24, 18]
+      thresholds: [-1815.627]
+      coefficients: [-0.075141, 0.052049]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 8, 4, 2]
+      thresholds: [-65.042]
+      coefficients: [0.283870, -0.012993]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 0, 21, 2]
+      thresholds: [101.643]
+      coefficients: [-0.011900, 0.259328]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 9, 8, 2]
+      thresholds: [-149.028]
+      coefficients: [-0.042151, 0.068105]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 8, 4, 3]
+      thresholds: [164.129]
+      coefficients: [-0.022095, 0.124134]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 14, 2, 2]
+      thresholds: [44.234]
+      coefficients: [0.018444, -0.132747]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 14, 2, 2]
+      thresholds: [-20.726]
+      coefficients: [-0.229907, 0.009397]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 15, 4, 7]
+      thresholds: [-81.448]
+      coefficients: [-0.157841, 0.012851]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 10, 2, 10]
+      thresholds: [-214.516]
+      coefficients: [-0.037345, 0.054032]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 11, 21, 6]
+      thresholds: [36.151]
+      coefficients: [0.011883, -0.169686]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 10, 12, 14]
+      thresholds: [-1234.961]
+      coefficients: [-0.014644, 0.115572]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 8, 8]
+      thresholds: [-261.433]
+      coefficients: [0.051597, -0.031121]
+- name: right eye (center)
+  mean_position: {x: 41.655, y: 23.107}
+  basis_vectors:
+  - {x: 0.036, y: 0.129}
+  - {x: 0.233, y: -0.148}
+  - {x: 0.017, y: 0.019}
+  - {x: -0.086, y: 0.023}
+  - {x: 0.161, y: 0.219}
+  - {x: 0.082, y: 0.104}
+  - {x: 0.049, y: 0.043}
+  - {x: -0.097, y: 0.052}
+  - {x: -0.073, y: -0.001}
+  - {x: -0.015, y: 0.171}
+  - {x: -0.033, y: 0.007}
+  - {x: -0.123, y: 0.147}
+  - {x: -0.093, y: 0.046}
+  - {x: -0.220, y: -0.004}
+  - {x: -0.078, y: 0.076}
+  locator:
+    x:
+    - image_feature:
+        type: haar_diag
+        rect: [10, 10, 4, 14]
+      thresholds: [-6.414]
+      coefficients: [0.357966, -0.209504]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 7, 18, 15]
+      thresholds: [-553.601]
+      coefficients: [0.128800, -0.272907]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 13, 4, 2]
+      thresholds: [31.288]
+      coefficients: [0.061839, -0.359064]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 6, 2, 11]
+      thresholds: [-20.658]
+      coefficients: [-0.146900, 0.119142]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 4, 16, 14]
+      thresholds: [-350.430]
+      coefficients: [0.282764, -0.041072]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 6, 14, 18]
+      thresholds: [779.671]
+      coefficients: [0.057508, -0.159886]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 7, 6, 13]
+      thresholds: [132.944]
+      coefficients: [-0.088799, 0.108601]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 3, 2, 14]
+      thresholds: [9.557]
+      coefficients: [0.058057, -0.098322]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 10, 4, 14]
+      thresholds: [-141.673]
+      coefficients: [0.153512, -0.027769]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 19, 10, 5]
+      thresholds: [-45.305]
+      coefficients: [0.051769, -0.085345]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 1, 6, 8]
+      thresholds: [201.836]
+      coefficients: [-0.036067, 0.084048]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 2, 6, 16]
+      thresholds: [1128.447]
+      coefficients: [-0.014668, 0.184906]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 7, 2, 7]
+      thresholds: [-6.810]
+      coefficients: [0.032218, -0.072861]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 2, 6, 21]
+      thresholds: [-352.956]
+      coefficients: [-0.196182, 0.010019]
+    - image_feature:
+        type: haar_horiz3
+        rect: [15, 4, 9, 3]
+      thresholds: [912.592]
+      coefficients: [0.040169, -0.045516]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 19, 4, 4]
+      thresholds: [75.555]
+      coefficients: [0.015589, -0.109830]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 2, 6, 21]
+      thresholds: [1339.814]
+      coefficients: [-0.005634, 0.309012]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 15, 8, 7]
+      thresholds: [-232.384]
+      coefficients: [0.098189, -0.015776]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 0, 2, 6]
+      thresholds: [10.236]
+      coefficients: [0.029715, -0.046878]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 11, 2, 5]
+      thresholds: [-80.919]
+      coefficients: [-0.110561, 0.010677]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 2, 4, 1]
+      thresholds: [42.472]
+      coefficients: [-0.006667, 0.172686]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 10, 14, 12]
+      thresholds: [54.167]
+      coefficients: [0.015875, -0.063416]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 14, 12, 5]
+      thresholds: [-161.813]
+      coefficients: [0.055913, -0.016964]
+    - image_feature:
+        type: haar_horiz2
+        rect: [19, 15, 2, 8]
+      thresholds: [-137.445]
+      coefficients: [0.144647, -0.006027]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 0, 20, 12]
+      thresholds: [3544.634]
+      coefficients: [-0.002703, 0.308262]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 12, 6]
+      thresholds: [-150.269]
+      coefficients: [0.437499, -0.458755]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 2, 17, 16]
+      thresholds: [335.949]
+      coefficients: [0.513289, -0.165625]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 10, 12, 6]
+      thresholds: [88.359]
+      coefficients: [0.108423, -0.584258]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 0, 2, 8]
+      thresholds: [37.431]
+      coefficients: [-0.204346, 0.139165]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 7, 2, 8]
+      thresholds: [-178.802]
+      coefficients: [0.444911, -0.051698]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 14, 17, 6]
+      thresholds: [-485.480]
+      coefficients: [-0.111707, 0.151672]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 12, 10, 4]
+      thresholds: [234.291]
+      coefficients: [0.018988, -0.715700]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 0, 4, 4]
+      thresholds: [32.800]
+      coefficients: [-0.076240, 0.137867]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 14, 11, 10]
+      thresholds: [-1218.981]
+      coefficients: [-0.190016, 0.041937]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 14, 2, 2]
+      thresholds: [15.480]
+      coefficients: [0.035193, -0.161884]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 2, 9, 14]
+      thresholds: [-616.464]
+      coefficients: [0.354828, -0.013976]
+    - image_feature:
+        type: haar_vert3
+        rect: [10, 9, 14, 6]
+      thresholds: [2504.454]
+      coefficients: [-0.132479, 0.028221]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 12, 9, 8]
+      thresholds: [-380.216]
+      coefficients: [-0.029755, 0.107859]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 12, 21, 6]
+      thresholds: [434.882]
+      coefficients: [0.003918, -0.827487]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 1, 16, 4]
+      thresholds: [395.063]
+      coefficients: [-0.007262, 0.348380]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 15, 2, 1]
+      thresholds: [-19.220]
+      coefficients: [-0.160987, 0.014218]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 8, 10, 8]
+      thresholds: [-187.892]
+      coefficients: [0.234407, -0.008733]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 14, 9, 10]
+      thresholds: [-67.122]
+      coefficients: [-0.024479, 0.075723]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 14, 8, 4]
+      thresholds: [37.737]
+      coefficients: [0.029566, -0.055583]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 12, 6]
+      thresholds: [-150.112]
+      coefficients: [-0.040250, 0.042987]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 12, 3, 6]
+      thresholds: [237.477]
+      coefficients: [0.002471, -0.671851]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 10, 8, 4]
+      thresholds: [54.677]
+      coefficients: [-0.027787, 0.057870]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 6, 2, 4]
+      thresholds: [-66.895]
+      coefficients: [0.210902, -0.006394]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 2, 17, 16]
+      thresholds: [339.456]
+      coefficients: [-0.064510, 0.021258]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 22, 14, 2]
+      thresholds: [-222.514]
+      coefficients: [0.063200, -0.020756]
+- name: mouth (left)
+  mean_position: {x: 21.215, y: 47.117}
+  basis_vectors:
+  - {x: -0.066, y: 0.300}
+  - {x: -0.002, y: 0.049}
+  - {x: 0.231, y: 0.119}
+  - {x: -0.153, y: 0.154}
+  - {x: -0.075, y: -0.133}
+  - {x: -0.252, y: -0.239}
+  - {x: 0.116, y: 0.056}
+  - {x: 0.260, y: -0.018}
+  - {x: -0.494, y: -0.038}
+  - {x: 0.016, y: -0.019}
+  - {x: -0.075, y: -0.264}
+  - {x: 0.104, y: 0.048}
+  - {x: -0.074, y: 0.010}
+  - {x: 0.125, y: 0.088}
+  - {x: -0.124, y: 0.186}
+  locator:
+    x:
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 9, 1, 10]
+      thresholds: [-7.065]
+      coefficients: [0.125168, -0.198924]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 17, 8, 3]
+      thresholds: [50.920]
+      coefficients: [0.127646, -0.189928]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 9, 14, 4]
+      thresholds: [-239.841]
+      coefficients: [-0.233763, 0.062675]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 2]
+      thresholds: [-35.602]
+      coefficients: [0.239675, -0.052925]
+    - image_feature:
+        type: haar_diag
+        rect: [1, 3, 4, 12]
+      thresholds: [-148.962]
+      coefficients: [-0.210046, 0.046264]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 0, 10, 24]
+      thresholds: [188.026]
+      coefficients: [0.164504, -0.054752]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 12, 4, 9]
+      thresholds: [-114.417]
+      coefficients: [0.174788, -0.038806]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 0, 18, 2]
+      thresholds: [-104.590]
+      coefficients: [-0.165963, 0.034505]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 14, 8, 2]
+      thresholds: [127.883]
+      coefficients: [0.031363, -0.171367]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 2]
+      thresholds: [53.852]
+      coefficients: [-0.023796, 0.197539]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 5, 2]
+      thresholds: [72.374]
+      coefficients: [-0.019556, 0.202686]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 6, 4, 17]
+      thresholds: [36.554]
+      coefficients: [0.092877, -0.046328]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 15, 6, 3]
+      thresholds: [-79.949]
+      coefficients: [-0.209235, 0.015052]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 0, 2, 24]
+      thresholds: [63.961]
+      coefficients: [-0.033478, 0.090726]
+    - image_feature:
+        type: haar_diag
+        rect: [15, 0, 8, 12]
+      thresholds: [-522.489]
+      coefficients: [-0.220859, 0.012640]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 9, 6, 15]
+      thresholds: [-721.236]
+      coefficients: [-0.089627, 0.028891]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 1, 9, 22]
+      thresholds: [-886.475]
+      coefficients: [-0.188131, 0.014491]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 5, 2]
+      thresholds: [-39.596]
+      coefficients: [0.232400, -0.010319]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 7, 5, 8]
+      thresholds: [362.293]
+      coefficients: [-0.027138, 0.084381]
+    - image_feature:
+        type: haar_diag
+        rect: [18, 10, 6, 8]
+      thresholds: [-73.879]
+      coefficients: [-0.069992, 0.031238]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 0, 6, 6]
+      thresholds: [85.030]
+      coefficients: [-0.015909, 0.124509]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 2, 4, 6]
+      thresholds: [-27.692]
+      coefficients: [0.093148, -0.020491]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 4, 14, 2]
+      thresholds: [-77.313]
+      coefficients: [-0.096496, 0.018351]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 0, 6, 2]
+      thresholds: [-45.514]
+      coefficients: [0.049594, -0.036818]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 10, 3, 4]
+      thresholds: [-159.698]
+      coefficients: [0.288357, -0.005038]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 10, 3, 4]
+      thresholds: [-6.030]
+      coefficients: [0.446707, -0.402355]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 11, 9, 4]
+      thresholds: [102.468]
+      coefficients: [0.141211, -0.558106]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 9, 19, 4]
+      thresholds: [-133.546]
+      coefficients: [0.499618, -0.105780]
+    - image_feature:
+        type: haar_diag
+        rect: [1, 10, 16, 2]
+      thresholds: [51.131]
+      coefficients: [-0.075066, 0.313474]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 9, 10, 10]
+      thresholds: [304.155]
+      coefficients: [0.050292, -0.429921]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 9, 17, 2]
+      thresholds: [-98.593]
+      coefficients: [0.584260, -0.023504]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 13, 5, 4]
+      thresholds: [-89.700]
+      coefficients: [-0.162388, 0.077771]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 12, 9, 4]
+      thresholds: [347.954]
+      coefficients: [0.020679, -0.485815]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 20, 12, 4]
+      thresholds: [-82.462]
+      coefficients: [0.167095, -0.042298]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 11, 9, 4]
+      thresholds: [7.575]
+      coefficients: [0.046125, -0.118120]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 7, 11, 4]
+      thresholds: [-510.571]
+      coefficients: [1.331022, -0.004195]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 2, 9, 14]
+      thresholds: [1763.230]
+      coefficients: [0.027462, -0.188931]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 0, 4, 6]
+      thresholds: [36.377]
+      coefficients: [-0.063794, 0.064546]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 9, 8, 2]
+      thresholds: [-27.304]
+      coefficients: [0.201444, -0.019124]
+    - image_feature:
+        type: haar_vert3
+        rect: [9, 0, 6, 15]
+      thresholds: [2050.277]
+      coefficients: [-0.235001, 0.015279]
+    - image_feature:
+        type: haar_diag
+        rect: [16, 16, 6, 6]
+      thresholds: [-89.356]
+      coefficients: [-0.176327, 0.017763]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 2]
+      thresholds: [-11.741]
+      coefficients: [0.073971, -0.037769]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 14, 6, 2]
+      thresholds: [111.530]
+      coefficients: [0.004242, -0.543185]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 4, 7, 8]
+      thresholds: [257.254]
+      coefficients: [0.045231, -0.047883]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 19, 16, 4]
+      thresholds: [-150.093]
+      coefficients: [0.184000, -0.011201]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 0, 15, 6]
+      thresholds: [251.117]
+      coefficients: [-0.031601, 0.064418]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 15, 3, 4]
+      thresholds: [-168.864]
+      coefficients: [-0.278944, 0.007099]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 11, 4, 4]
+      thresholds: [11.399]
+      coefficients: [-0.039977, 0.046301]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 6, 11, 4]
+      thresholds: [-696.438]
+      coefficients: [2.401737, -0.000755]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 1, 7, 4]
+      thresholds: [-168.831]
+      coefficients: [-0.300180, 0.005408]
+- name: mouth (right)
+  mean_position: {x: 39.204, y: 47.149}
+  basis_vectors:
+  - {x: -0.042, y: 0.333}
+  - {x: 0.187, y: 0.082}
+  - {x: 0.308, y: -0.035}
+  - {x: -0.047, y: 0.084}
+  - {x: 0.035, y: -0.003}
+  - {x: 0.279, y: -0.252}
+  - {x: -0.222, y: 0.032}
+  - {x: -0.244, y: 0.024}
+  - {x: 0.276, y: -0.091}
+  - {x: -0.110, y: -0.012}
+  - {x: -0.004, y: -0.273}
+  - {x: -0.024, y: 0.040}
+  - {x: 0.336, y: -0.097}
+  - {x: -0.045, y: 0.071}
+  - {x: 0.109, y: 0.009}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 0, 6, 17]
+      thresholds: [-201.697]
+      coefficients: [0.156048, -0.199242]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 10, 10, 4]
+      thresholds: [-233.991]
+      coefficients: [-0.113866, 0.174175]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 11, 2, 10]
+      thresholds: [-67.066]
+      coefficients: [-0.090477, 0.144173]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 15, 10, 7]
+      thresholds: [-262.825]
+      coefficients: [0.148488, -0.066541]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 14, 4, 7]
+      thresholds: [-13.245]
+      coefficients: [-0.068354, 0.120329]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 0, 8, 12]
+      thresholds: [-245.664]
+      coefficients: [-0.057089, 0.119801]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 7, 2, 8]
+      thresholds: [224.258]
+      coefficients: [0.035099, -0.181486]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 2, 6, 21]
+      thresholds: [316.088]
+      coefficients: [-0.054350, 0.106214]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 16, 4, 2]
+      thresholds: [27.757]
+      coefficients: [0.038388, -0.133944]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 3, 6, 15]
+      thresholds: [-219.215]
+      coefficients: [0.094556, -0.051420]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 7, 5, 6]
+      thresholds: [107.544]
+      coefficients: [0.062412, -0.070945]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 15, 4, 1]
+      thresholds: [2.018]
+      coefficients: [0.048245, -0.080716]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 14, 14]
+      thresholds: [109.534]
+      coefficients: [-0.094117, 0.036808]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 1, 5, 4]
+      thresholds: [163.702]
+      coefficients: [0.016215, -0.180062]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 15, 10, 7]
+      thresholds: [-690.537]
+      coefficients: [0.159223, -0.017445]
+    - image_feature:
+        type: haar_horiz2
+        rect: [19, 4, 4, 4]
+      thresholds: [-64.577]
+      coefficients: [0.159497, -0.015563]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 15, 2, 1]
+      thresholds: [3.524]
+      coefficients: [0.022594, -0.096225]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 0, 12, 13]
+      thresholds: [-1603.936]
+      coefficients: [0.131662, -0.016334]
+    - image_feature:
+        type: haar_horiz3
+        rect: [13, 15, 9, 5]
+      thresholds: [856.715]
+      coefficients: [0.125926, -0.016951]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 12, 8, 2]
+      thresholds: [61.730]
+      coefficients: [0.017279, -0.114733]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 9, 8, 2]
+      thresholds: [82.486]
+      coefficients: [0.011436, -0.173352]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 1, 5, 14]
+      thresholds: [161.567]
+      coefficients: [0.082745, -0.022225]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 0, 5, 4]
+      thresholds: [224.101]
+      coefficients: [0.008486, -0.205909]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 15, 8, 8]
+      thresholds: [-460.551]
+      coefficients: [-0.151772, 0.009742]
+    - image_feature:
+        type: haar_diag
+        rect: [13, 0, 4, 20]
+      thresholds: [181.193]
+      coefficients: [-0.014986, 0.094265]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 10, 3, 4]
+      thresholds: [-14.996]
+      coefficients: [0.440460, -0.377149]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 10, 9, 6]
+      thresholds: [133.309]
+      coefficients: [0.161342, -0.551374]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 10, 15, 2]
+      thresholds: [-40.082]
+      coefficients: [0.445663, -0.107491]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 14, 10, 1]
+      thresholds: [-81.159]
+      coefficients: [-0.220527, 0.120448]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 8, 16, 4]
+      thresholds: [-110.371]
+      coefficients: [0.620363, -0.032874]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 12, 11, 4]
+      thresholds: [341.428]
+      coefficients: [0.024673, -0.709724]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 11, 10, 12]
+      thresholds: [-99.102]
+      coefficients: [0.135009, -0.109588]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 2, 3, 14]
+      thresholds: [730.083]
+      coefficients: [0.034832, -0.286997]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 7, 11, 8]
+      thresholds: [207.144]
+      coefficients: [0.157794, -0.062996]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 12, 8, 2]
+      thresholds: [66.589]
+      coefficients: [0.036647, -0.176417]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 5, 2]
+      thresholds: [-36.622]
+      coefficients: [0.248725, -0.023262]
+    - image_feature:
+        type: haar_horiz3
+        rect: [2, 18, 3, 4]
+      thresholds: [316.460]
+      coefficients: [-0.146233, 0.037331]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 1, 14, 16]
+      thresholds: [-411.615]
+      coefficients: [0.117734, -0.039275]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 13, 5, 4]
+      thresholds: [201.879]
+      coefficients: [0.004619, -0.877354]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 14, 6, 2]
+      thresholds: [-29.230]
+      coefficients: [-0.134681, 0.023797]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 11, 11, 2]
+      thresholds: [41.962]
+      coefficients: [0.043064, -0.058406]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 10, 14, 6]
+      thresholds: [1218.452]
+      coefficients: [-0.001826, 1.339344]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 12, 11, 4]
+      thresholds: [218.324]
+      coefficients: [0.010872, -0.197610]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 3, 12, 10]
+      thresholds: [1990.136]
+      coefficients: [0.018098, -0.113539]
+    - image_feature:
+        type: haar_vert3
+        rect: [5, 1, 6, 18]
+      thresholds: [3790.792]
+      coefficients: [-0.061146, 0.032630]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 2, 4, 8]
+      thresholds: [-1.834]
+      coefficients: [0.053511, -0.032753]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 9, 8, 2]
+      thresholds: [-58.151]
+      coefficients: [0.155707, -0.011203]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 15, 6, 4]
+      thresholds: [43.655]
+      coefficients: [0.018732, -0.081600]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 7, 21, 4]
+      thresholds: [-401.121]
+      coefficients: [0.411140, -0.003429]
+    - image_feature:
+        type: haar_vert2
+        rect: [19, 3, 3, 8]
+      thresholds: [-71.439]
+      coefficients: [0.130087, -0.009989]
+- name: left eyebrow (left)
+  mean_position: {x: 10.539, y: 18.743}
+  basis_vectors:
+  - {x: -0.071, y: 0.047}
+  - {x: -0.159, y: -0.186}
+  - {x: -0.017, y: 0.330}
+  - {x: -0.215, y: 0.077}
+  - {x: 0.187, y: -0.037}
+  - {x: -0.147, y: 0.000}
+  - {x: -0.117, y: -0.058}
+  - {x: -0.211, y: 0.092}
+  - {x: -0.215, y: 0.050}
+  - {x: 0.224, y: -0.301}
+  - {x: -0.093, y: 0.015}
+  - {x: -0.041, y: -0.577}
+  - {x: 0.076, y: -0.277}
+  - {x: -0.217, y: 0.039}
+  - {x: -0.043, y: -0.241}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 5, 4, 17]
+      thresholds: [-144.061]
+      coefficients: [0.211694, -0.200521]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 8, 6, 13]
+      thresholds: [-334.348]
+      coefficients: [-0.222239, 0.128258]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 4, 3, 6]
+      thresholds: [63.012]
+      coefficients: [-0.075065, 0.212600]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 7, 6, 13]
+      thresholds: [97.806]
+      coefficients: [0.083512, -0.170175]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 4, 8, 19]
+      thresholds: [-505.891]
+      coefficients: [0.224924, -0.038338]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 7, 2, 14]
+      thresholds: [8.967]
+      coefficients: [-0.060580, 0.111630]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 16, 5, 6]
+      thresholds: [-129.900]
+      coefficients: [0.067831, -0.083471]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 6, 4, 7]
+      thresholds: [-94.915]
+      coefficients: [0.106805, -0.044783]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 5, 6, 6]
+      thresholds: [549.083]
+      coefficients: [0.009478, -0.398022]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 7, 1, 2]
+      thresholds: [8.893]
+      coefficients: [-0.026221, 0.135768]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 8, 10, 16]
+      thresholds: [3415.259]
+      coefficients: [0.015425, -0.193503]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 8, 4, 4]
+      thresholds: [24.792]
+      coefficients: [-0.034412, 0.083422]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 19, 6, 3]
+      thresholds: [-86.841]
+      coefficients: [0.049521, -0.056730]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 6, 3, 2]
+      thresholds: [35.330]
+      coefficients: [-0.008440, 0.312707]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 2, 8, 1]
+      thresholds: [16.452]
+      coefficients: [0.023270, -0.098298]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 5, 8, 17]
+      thresholds: [-1445.128]
+      coefficients: [-0.207657, 0.010941]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 16, 8, 8]
+      thresholds: [143.348]
+      coefficients: [0.047344, -0.044853]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 10, 3, 4]
+      thresholds: [-95.714]
+      coefficients: [0.086081, -0.022515]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 0, 6, 18]
+      thresholds: [-15.331]
+      coefficients: [-0.015163, 0.110976]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 18, 5, 6]
+      thresholds: [-244.914]
+      coefficients: [0.083791, -0.021099]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 1, 8, 18]
+      thresholds: [-3715.876]
+      coefficients: [-0.254890, 0.006599]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 0, 10, 5]
+      thresholds: [-1472.983]
+      coefficients: [-0.091073, 0.017795]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 19, 10, 5]
+      thresholds: [-1218.291]
+      coefficients: [0.056097, -0.024804]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 5, 4, 19]
+      thresholds: [221.845]
+      coefficients: [0.007834, -0.162194]
+    - image_feature:
+        type: haar_vert2
+        rect: [17, 7, 2, 14]
+      thresholds: [387.261]
+      coefficients: [-0.013371, 0.094208]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 14, 17, 6]
+      thresholds: [-228.311]
+      coefficients: [0.203790, -0.475057]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 4, 3, 6]
+      thresholds: [60.485]
+      coefficients: [-0.161681, 0.428132]
+    - image_feature:
+        type: haar_vert2
+        rect: [21, 5, 2, 18]
+      thresholds: [46.075]
+      coefficients: [0.247626, -0.154079]
+    - image_feature:
+        type: haar_diag
+        rect: [12, 5, 10, 18]
+      thresholds: [-188.604]
+      coefficients: [-0.128611, 0.194825]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 18, 11, 6]
+      thresholds: [-397.370]
+      coefficients: [-0.121925, 0.148281]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 3, 24, 4]
+      thresholds: [-309.485]
+      coefficients: [0.387706, -0.034092]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 7, 20, 12]
+      thresholds: [1640.040]
+      coefficients: [0.037593, -0.325723]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 16, 11, 6]
+      thresholds: [277.470]
+      coefficients: [0.018461, -0.563163]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 2, 22, 10]
+      thresholds: [1450.646]
+      coefficients: [0.020439, -0.387606]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 6, 16, 12]
+      thresholds: [2805.216]
+      coefficients: [0.027844, -0.247842]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 8, 4, 2]
+      thresholds: [-14.278]
+      coefficients: [-0.071724, 0.096185]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 16, 3, 4]
+      thresholds: [47.943]
+      coefficients: [0.030664, -0.162144]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 9, 10, 10]
+      thresholds: [113.456]
+      coefficients: [-0.042154, 0.116895]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 3, 21, 16]
+      thresholds: [3144.982]
+      coefficients: [0.026591, -0.149890]
+    - image_feature:
+        type: haar_vert3
+        rect: [21, 1, 2, 18]
+      thresholds: [851.463]
+      coefficients: [-0.140015, 0.023790]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 9, 4, 2]
+      thresholds: [35.194]
+      coefficients: [-0.016015, 0.199699]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 4, 4, 14]
+      thresholds: [656.223]
+      coefficients: [0.022737, -0.148644]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 7, 12, 16]
+      thresholds: [-4129.901]
+      coefficients: [0.346856, -0.007951]
+    - image_feature:
+        type: haar_diag
+        rect: [19, 2, 4, 10]
+      thresholds: [-139.223]
+      coefficients: [0.160946, -0.016849]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 8, 6, 6]
+      thresholds: [-342.437]
+      coefficients: [0.254211, -0.009958]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 17, 9, 6]
+      thresholds: [473.570]
+      coefficients: [0.003857, -0.620503]
+    - image_feature:
+        type: haar_vert2
+        rect: [20, 18, 2, 4]
+      thresholds: [-22.145]
+      coefficients: [-0.027914, 0.086497]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 10, 9, 12]
+      thresholds: [1694.145]
+      coefficients: [0.004354, -0.542765]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 6, 6, 4]
+      thresholds: [-22.649]
+      coefficients: [0.084763, -0.025702]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 0, 14, 14]
+      thresholds: [-3937.125]
+      coefficients: [0.194701, -0.012566]
+- name: left eyebrow (right)
+  mean_position: {x: 24.460, y: 17.965}
+  basis_vectors:
+  - {x: 0.024, y: 0.069}
+  - {x: -0.017, y: -0.247}
+  - {x: -0.046, y: 0.137}
+  - {x: -0.214, y: -0.022}
+  - {x: 0.201, y: -0.034}
+  - {x: -0.277, y: 0.018}
+  - {x: -0.187, y: 0.196}
+  - {x: 0.091, y: -0.480}
+  - {x: 0.176, y: -0.175}
+  - {x: -0.339, y: -0.108}
+  - {x: 0.135, y: 0.137}
+  - {x: 0.242, y: -0.052}
+  - {x: -0.430, y: -0.137}
+  - {x: -0.170, y: 0.122}
+  - {x: 0.418, y: 0.223}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 8, 10, 7]
+      thresholds: [-26.409]
+      coefficients: [-0.243516, 0.172524]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 8, 6, 12]
+      thresholds: [-64.997]
+      coefficients: [0.129783, -0.177497]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 13, 10, 6]
+      thresholds: [-450.193]
+      coefficients: [-0.231450, 0.049070]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 7, 8, 13]
+      thresholds: [-567.749]
+      coefficients: [0.171191, -0.048112]
+    - image_feature:
+        type: haar_diag
+        rect: [15, 4, 6, 8]
+      thresholds: [-58.490]
+      coefficients: [0.117938, -0.058261]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 10, 18, 11]
+      thresholds: [-9.779]
+      coefficients: [0.037671, -0.146291]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 6, 10, 11]
+      thresholds: [-413.599]
+      coefficients: [-0.215910, 0.022007]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 7, 16, 4]
+      thresholds: [21.586]
+      coefficients: [0.086520, -0.042082]
+    - image_feature:
+        type: haar_horiz2
+        rect: [17, 17, 6, 7]
+      thresholds: [255.176]
+      coefficients: [0.044624, -0.076901]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 6, 6, 18]
+      thresholds: [-179.706]
+      coefficients: [0.069946, -0.042990]
+    - image_feature:
+        type: haar_vert2
+        rect: [19, 4, 5, 6]
+      thresholds: [106.435]
+      coefficients: [-0.025762, 0.106799]
+    - image_feature:
+        type: haar_vert3
+        rect: [9, 11, 4, 6]
+      thresholds: [644.106]
+      coefficients: [-0.074101, 0.033144]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 2, 10, 1]
+      thresholds: [10.952]
+      coefficients: [0.023317, -0.099387]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 12, 6, 3]
+      thresholds: [-12.416]
+      coefficients: [-0.036003, 0.066019]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 10, 12, 6]
+      thresholds: [-210.478]
+      coefficients: [-0.107979, 0.018594]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 1, 3, 10]
+      thresholds: [-24.927]
+      coefficients: [-0.045068, 0.040891]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 0, 14, 14]
+      thresholds: [25.221]
+      coefficients: [0.072101, -0.025804]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 6, 6, 12]
+      thresholds: [-293.240]
+      coefficients: [0.089269, -0.020790]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 22, 4, 2]
+      thresholds: [-56.474]
+      coefficients: [0.095545, -0.016951]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 11, 14, 11]
+      thresholds: [-1528.068]
+      coefficients: [0.267576, -0.006045]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 1, 8, 22]
+      thresholds: [1133.011]
+      coefficients: [0.022696, -0.069735]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 4, 14, 17]
+      thresholds: [-741.595]
+      coefficients: [0.013886, -0.110396]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 0, 8, 22]
+      thresholds: [-296.415]
+      coefficients: [-0.116450, 0.012743]
+    - image_feature:
+        type: haar_horiz3
+        rect: [1, 3, 12, 2]
+      thresholds: [1910.245]
+      coefficients: [-0.006557, 0.219513]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 2, 14, 10]
+      thresholds: [1400.850]
+      coefficients: [0.012198, -0.109909]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 6, 11, 4]
+      thresholds: [129.492]
+      coefficients: [-0.325562, 0.512065]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 5, 4, 4]
+      thresholds: [100.586]
+      coefficients: [-0.123040, 0.528611]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 10, 3, 4]
+      thresholds: [175.515]
+      coefficients: [0.108092, -0.397517]
+    - image_feature:
+        type: haar_vert2
+        rect: [22, 6, 2, 6]
+      thresholds: [21.850]
+      coefficients: [-0.245586, 0.110754]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 6, 17, 2]
+      thresholds: [110.845]
+      coefficients: [-0.039406, 0.471175]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 19, 18, 5]
+      thresholds: [-83.434]
+      coefficients: [-0.103462, 0.155395]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 3, 16, 8]
+      thresholds: [356.186]
+      coefficients: [-0.135875, 0.102234]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 11, 9, 4]
+      thresholds: [468.698]
+      coefficients: [0.028690, -0.342336]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 5, 4, 2]
+      thresholds: [39.767]
+      coefficients: [-0.014324, 0.564887]
+    - image_feature:
+        type: haar_diag
+        rect: [20, 6, 4, 4]
+      thresholds: [-19.459]
+      coefficients: [0.096281, -0.067951]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 20, 13, 4]
+      thresholds: [-295.415]
+      coefficients: [-0.100931, 0.054506]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 18, 11, 6]
+      thresholds: [859.218]
+      coefficients: [-0.005587, 0.854823]
+    - image_feature:
+        type: haar_horiz2
+        rect: [22, 4, 2, 5]
+      thresholds: [12.895]
+      coefficients: [-0.031464, 0.128278]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 3, 8, 4]
+      thresholds: [-289.321]
+      coefficients: [0.197378, -0.019734]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 8, 6, 4]
+      thresholds: [-26.573]
+      coefficients: [-0.139127, 0.025760]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 6, 10, 1]
+      thresholds: [-9.796]
+      coefficients: [0.080162, -0.046669]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 0, 17, 18]
+      thresholds: [8626.900]
+      coefficients: [0.012301, -0.260267]
+    - image_feature:
+        type: haar_vert3
+        rect: [0, 1, 3, 12]
+      thresholds: [1603.719]
+      coefficients: [-0.036459, 0.090430]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 2, 6, 7]
+      thresholds: [-26.614]
+      coefficients: [0.047505, -0.059899]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 8, 6, 8]
+      thresholds: [522.772]
+      coefficients: [-0.011379, 0.215024]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 7, 10, 12]
+      thresholds: [198.468]
+      coefficients: [0.051087, -0.051002]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 7, 11, 8]
+      thresholds: [-891.925]
+      coefficients: [-0.432556, 0.005597]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 12, 21, 8]
+      thresholds: [1881.950]
+      coefficients: [-0.014315, 0.156357]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 12, 10, 8]
+      thresholds: [-1284.129]
+      coefficients: [0.241689, -0.008352]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 6, 11, 18]
+      thresholds: [5188.058]
+      coefficients: [0.002541, -0.780147]
+- name: right eyebrow (left)
+  mean_position: {x: 35.747, y: 17.994}
+  basis_vectors:
+  - {x: -0.037, y: 0.132}
+  - {x: 0.186, y: -0.250}
+  - {x: -0.001, y: 0.032}
+  - {x: -0.158, y: -0.058}
+  - {x: 0.124, y: 0.065}
+  - {x: 0.001, y: 0.021}
+  - {x: 0.164, y: 0.357}
+  - {x: -0.054, y: -0.465}
+  - {x: 0.028, y: -0.099}
+  - {x: 0.514, y: -0.048}
+  - {x: -0.253, y: 0.209}
+  - {x: -0.471, y: 0.089}
+  - {x: -0.143, y: 0.009}
+  - {x: 0.173, y: 0.007}
+  - {x: 0.347, y: -0.003}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 8, 14, 11]
+      thresholds: [47.556]
+      coefficients: [-0.205215, 0.239465]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 10, 10, 4]
+      thresholds: [266.888]
+      coefficients: [0.102823, -0.223488]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 8, 10, 12]
+      thresholds: [241.118]
+      coefficients: [-0.052779, 0.270522]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 9, 12, 5]
+      thresholds: [209.967]
+      coefficients: [-0.161229, 0.065135]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 17, 10, 6]
+      thresholds: [36.591]
+      coefficients: [0.048694, -0.137922]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 9, 10, 6]
+      thresholds: [-111.001]
+      coefficients: [0.196123, -0.028907]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 5, 12, 16]
+      thresholds: [-429.978]
+      coefficients: [-0.248206, 0.017066]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 11, 12, 4]
+      thresholds: [224.361]
+      coefficients: [0.051229, -0.076166]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 2]
+      thresholds: [-8.162]
+      coefficients: [0.127162, -0.023502]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 13, 4, 8]
+      thresholds: [-209.820]
+      coefficients: [-0.098414, 0.025734]
+    - image_feature:
+        type: haar_horiz3
+        rect: [9, 11, 3, 8]
+      thresholds: [1494.929]
+      coefficients: [0.010666, -0.202929]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 7, 3, 16]
+      thresholds: [774.934]
+      coefficients: [0.015328, -0.140746]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 0, 12, 7]
+      thresholds: [-526.076]
+      coefficients: [-0.153931, 0.015291]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 8, 18, 14]
+      thresholds: [-243.942]
+      coefficients: [0.240241, -0.008249]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 2, 6, 12]
+      thresholds: [219.637]
+      coefficients: [-0.038506, 0.040103]
+    - image_feature:
+        type: haar_vert3
+        rect: [12, 7, 8, 6]
+      thresholds: [1210.239]
+      coefficients: [0.125484, -0.012434]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 0, 8, 18]
+      thresholds: [-672.532]
+      coefficients: [0.150366, -0.009937]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 9, 4, 4]
+      thresholds: [100.680]
+      coefficients: [0.013406, -0.101522]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 10, 8, 4]
+      thresholds: [53.652]
+      coefficients: [-0.023675, 0.054290]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 1, 12, 8]
+      thresholds: [-98.514]
+      coefficients: [-0.050378, 0.027446]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 17, 10, 6]
+      thresholds: [632.441]
+      coefficients: [0.004645, -0.272630]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 9, 4, 5]
+      thresholds: [189.176]
+      coefficients: [-0.019504, 0.059022]
+    - image_feature:
+        type: haar_vert3
+        rect: [20, 3, 3, 18]
+      thresholds: [3830.434]
+      coefficients: [0.010153, -0.126416]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 4, 5, 20]
+      thresholds: [2076.825]
+      coefficients: [0.007535, -0.146229]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 22, 4, 2]
+      thresholds: [-9.672]
+      coefficients: [0.024497, -0.041070]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 4, 20, 6]
+      thresholds: [282.933]
+      coefficients: [-0.287831, 0.573197]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 3, 16, 8]
+      thresholds: [-329.756]
+      coefficients: [0.228489, -0.328390]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 3, 14, 6]
+      thresholds: [283.018]
+      coefficients: [-0.082846, 0.513090]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 10, 3, 4]
+      thresholds: [131.867]
+      coefficients: [0.111227, -0.260228]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 7, 8, 8]
+      thresholds: [-47.035]
+      coefficients: [-0.113564, 0.143891]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 0, 6, 8]
+      thresholds: [188.492]
+      coefficients: [-0.024868, 0.565703]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 9, 4, 12]
+      thresholds: [652.605]
+      coefficients: [0.037675, -0.290855]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 18, 22, 6]
+      thresholds: [-637.756]
+      coefficients: [0.195227, -0.042634]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 1, 3, 10]
+      thresholds: [-718.512]
+      coefficients: [0.508394, -0.014455]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 8, 8, 4]
+      thresholds: [54.441]
+      coefficients: [-0.181035, 0.038873]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 8, 18, 2]
+      thresholds: [82.921]
+      coefficients: [-0.020319, 0.297482]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 17, 10, 4]
+      thresholds: [540.597]
+      coefficients: [-0.010587, 0.482929]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 0, 4, 8]
+      thresholds: [-22.995]
+      coefficients: [0.071623, -0.061341]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 0, 17, 18]
+      thresholds: [8067.279]
+      coefficients: [0.014934, -0.276087]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 8, 4, 4]
+      thresholds: [-19.912]
+      coefficients: [-0.168039, 0.025681]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 3, 1, 4]
+      thresholds: [45.827]
+      coefficients: [-0.006247, 0.590426]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 5, 10, 10]
+      thresholds: [1630.473]
+      coefficients: [-0.007047, 0.450810]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 16, 19, 6]
+      thresholds: [290.412]
+      coefficients: [0.017480, -0.169247]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 8, 20]
+      thresholds: [224.885]
+      coefficients: [-0.014241, 0.210180]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 0, 16, 16]
+      thresholds: [7242.500]
+      coefficients: [0.007574, -0.335226]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 11, 14, 4]
+      thresholds: [536.882]
+      coefficients: [0.016553, -0.143935]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 15, 5, 8]
+      thresholds: [264.551]
+      coefficients: [0.015914, -0.139480]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 3, 8, 3]
+      thresholds: [41.445]
+      coefficients: [-0.034908, 0.067921]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 4, 11, 6]
+      thresholds: [-749.391]
+      coefficients: [0.181682, -0.012418]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 6, 16, 7]
+      thresholds: [1157.195]
+      coefficients: [-0.021228, 0.077471]
+- name: right eyebrow (right)
+  mean_position: {x: 49.601, y: 18.664}
+  basis_vectors:
+  - {x: 0.084, y: 0.167}
+  - {x: 0.318, y: -0.181}
+  - {x: -0.039, y: -0.042}
+  - {x: -0.057, y: 0.003}
+  - {x: 0.229, y: 0.284}
+  - {x: 0.087, y: -0.057}
+  - {x: 0.064, y: 0.244}
+  - {x: 0.081, y: 0.155}
+  - {x: 0.006, y: 0.212}
+  - {x: -0.262, y: -0.238}
+  - {x: -0.034, y: 0.107}
+  - {x: -0.018, y: -0.225}
+  - {x: 0.063, y: 0.188}
+  - {x: 0.328, y: 0.359}
+  - {x: 0.268, y: -0.046}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 11, 4, 1]
+      thresholds: [9.969]
+      coefficients: [-0.156107, 0.225893]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 6, 8, 13]
+      thresholds: [-83.238]
+      coefficients: [0.188371, -0.127545]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 2, 6, 20]
+      thresholds: [-281.510]
+      coefficients: [0.133745, -0.090117]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 15, 10, 7]
+      thresholds: [65.824]
+      coefficients: [0.058787, -0.181526]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 6, 6, 7]
+      thresholds: [-9.696]
+      coefficients: [0.131985, -0.069038]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 8, 4, 15]
+      thresholds: [767.919]
+      coefficients: [-0.020405, 0.354167]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 1, 2, 20]
+      thresholds: [573.102]
+      coefficients: [0.070964, -0.097766]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 7, 4, 8]
+      thresholds: [43.175]
+      coefficients: [-0.093988, 0.066208]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 1, 16, 4]
+      thresholds: [-171.133]
+      coefficients: [0.107414, -0.039567]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 2, 4, 9]
+      thresholds: [-102.759]
+      coefficients: [0.092170, -0.042273]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 9, 2, 2]
+      thresholds: [-17.795]
+      coefficients: [-0.111644, 0.030111]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 20, 13, 4]
+      thresholds: [-321.707]
+      coefficients: [-0.126306, 0.024722]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 4, 7, 8]
+      thresholds: [553.402]
+      coefficients: [0.042978, -0.069066]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 14, 12, 6]
+      thresholds: [-64.475]
+      coefficients: [0.025514, -0.105269]
+    - image_feature:
+        type: haar_horiz3
+        rect: [9, 17, 12, 4]
+      thresholds: [2789.996]
+      coefficients: [-0.020305, 0.129900]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 2, 4, 19]
+      thresholds: [-76.470]
+      coefficients: [0.096995, -0.020750]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 7, 8, 8]
+      thresholds: [-586.693]
+      coefficients: [-0.239123, 0.008103]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 0, 18, 2]
+      thresholds: [390.786]
+      coefficients: [0.047767, -0.042173]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 15, 2, 8]
+      thresholds: [68.487]
+      coefficients: [-0.020980, 0.096673]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 12, 14, 1]
+      thresholds: [895.443]
+      coefficients: [-0.004765, 0.356393]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 5, 2, 18]
+      thresholds: [338.034]
+      coefficients: [-0.004278, 0.396278]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 9, 4, 5]
+      thresholds: [-94.284]
+      coefficients: [0.033147, -0.046111]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 10, 12, 12]
+      thresholds: [-3300.394]
+      coefficients: [-0.186233, 0.008823]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 2, 18, 12]
+      thresholds: [2629.385]
+      coefficients: [0.016537, -0.093137]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 14, 14, 8]
+      thresholds: [-601.382]
+      coefficients: [0.066536, -0.021926]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 8, 12, 16]
+      thresholds: [-179.168]
+      coefficients: [0.282523, -0.408309]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 4, 9, 4]
+      thresholds: [23.380]
+      coefficients: [-0.173036, 0.378899]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 12, 21, 8]
+      thresholds: [-787.756]
+      coefficients: [0.264001, -0.135042]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 3, 24, 4]
+      thresholds: [197.689]
+      coefficients: [-0.059448, 0.406834]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 19, 10, 4]
+      thresholds: [-189.897]
+      coefficients: [-0.192335, 0.110455]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 8, 12, 16]
+      thresholds: [1309.455]
+      coefficients: [0.044875, -0.313185]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 7, 6, 6]
+      thresholds: [137.115]
+      coefficients: [0.088470, -0.137519]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 17, 14, 4]
+      thresholds: [224.699]
+      coefficients: [0.017934, -0.538596]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 17, 9, 6]
+      thresholds: [-215.661]
+      coefficients: [-0.047779, 0.147844]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 3, 6, 8]
+      thresholds: [175.702]
+      coefficients: [-0.034072, 0.171242]
+    - image_feature:
+        type: haar_horiz3
+        rect: [20, 2, 3, 11]
+      thresholds: [691.598]
+      coefficients: [0.200640, -0.028683]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 9, 19, 10]
+      thresholds: [-1518.671]
+      coefficients: [0.319844, -0.017403]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 2, 4, 8]
+      thresholds: [-13.580]
+      coefficients: [0.150616, -0.032707]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 15, 7, 8]
+      thresholds: [313.982]
+      coefficients: [0.012263, -0.390128]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 2, 18, 12]
+      thresholds: [2453.605]
+      coefficients: [0.032613, -0.149308]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 2, 5, 4]
+      thresholds: [-63.133]
+      coefficients: [0.098403, -0.042046]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 7, 6, 12]
+      thresholds: [175.176]
+      coefficients: [0.042400, -0.093753]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 11, 12, 8]
+      thresholds: [-825.914]
+      coefficients: [0.146582, -0.023345]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 20, 13, 4]
+      thresholds: [-180.613]
+      coefficients: [-0.075384, 0.041145]
+    - image_feature:
+        type: haar_vert3
+        rect: [13, 5, 10, 18]
+      thresholds: [7115.386]
+      coefficients: [-0.058286, 0.054415]
+    - image_feature:
+        type: haar_vert3
+        rect: [13, 3, 10, 6]
+      thresholds: [1245.118]
+      coefficients: [0.164957, -0.020574]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 2, 14, 14]
+      thresholds: [-441.019]
+      coefficients: [0.307024, -0.009479]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 10, 20, 14]
+      thresholds: [794.896]
+      coefficients: [0.015863, -0.173974]
+    - image_feature:
+        type: haar_horiz3
+        rect: [8, 17, 9, 2]
+      thresholds: [274.226]
+      coefficients: [-0.142078, 0.017382]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 0, 15, 6]
+      thresholds: [568.849]
+      coefficients: [-0.004392, 0.554801]
+- name: left temple
+  mean_position: {x: 9.033, y: 23.985}
+  basis_vectors:
+  - {x: -0.056, y: 0.047}
+  - {x: -0.142, y: -0.127}
+  - {x: 0.005, y: 0.335}
+  - {x: -0.158, y: 0.180}
+  - {x: 0.157, y: 0.067}
+  - {x: -0.215, y: 0.140}
+  - {x: -0.354, y: -0.115}
+  - {x: -0.122, y: 0.143}
+  - {x: -0.109, y: -0.097}
+  - {x: -0.063, y: 0.006}
+  - {x: -0.136, y: -0.087}
+  - {x: -0.162, y: -0.063}
+  - {x: 0.336, y: -0.196}
+  - {x: 0.097, y: -0.137}
+  - {x: -0.138, y: -0.010}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 2, 4, 18]
+      thresholds: [-436.973]
+      coefficients: [-0.242210, 0.235545]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 1, 6, 21]
+      thresholds: [-476.209]
+      coefficients: [0.219588, -0.150684]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 3, 4, 13]
+      thresholds: [-114.652]
+      coefficients: [-0.185361, 0.124679]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 8, 4, 8]
+      thresholds: [58.746]
+      coefficients: [0.080847, -0.161130]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 0, 6, 22]
+      thresholds: [-307.862]
+      coefficients: [0.065189, -0.127616]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 4, 4, 12]
+      thresholds: [-93.797]
+      coefficients: [-0.170389, 0.039676]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 2, 4, 11]
+      thresholds: [38.355]
+      coefficients: [-0.035134, 0.154454]
+    - image_feature:
+        type: haar_horiz2
+        rect: [22, 4, 2, 5]
+      thresholds: [-11.680]
+      coefficients: [0.091592, -0.044788]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 4, 2, 20]
+      thresholds: [-336.999]
+      coefficients: [0.051966, -0.063065]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 8, 6, 6]
+      thresholds: [-9.303]
+      coefficients: [0.076779, -0.033905]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 4, 2, 16]
+      thresholds: [418.029]
+      coefficients: [0.002544, -0.932690]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 0, 6, 23]
+      thresholds: [-1647.622]
+      coefficients: [-0.157932, 0.012510]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 1, 8, 22]
+      thresholds: [-3642.589]
+      coefficients: [0.123960, -0.014353]
+    - image_feature:
+        type: haar_horiz2
+        rect: [22, 16, 2, 8]
+      thresholds: [36.221]
+      coefficients: [-0.020019, 0.082272]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 8, 10, 10]
+      thresholds: [2726.444]
+      coefficients: [0.005824, -0.256545]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 7, 3, 8]
+      thresholds: [-6.531]
+      coefficients: [0.019217, -0.074945]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 3, 2, 13]
+      thresholds: [-26.652]
+      coefficients: [0.095183, -0.013914]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 2, 14, 18]
+      thresholds: [-2966.121]
+      coefficients: [-0.223393, 0.005096]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 11, 14, 10]
+      thresholds: [-262.639]
+      coefficients: [0.097917, -0.010489]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 1, 1, 4]
+      thresholds: [22.641]
+      coefficients: [-0.011364, 0.084596]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 1, 6, 21]
+      thresholds: [2947.243]
+      coefficients: [0.005259, -0.187181]
+    - image_feature:
+        type: haar_vert3
+        rect: [6, 2, 18, 12]
+      thresholds: [6175.557]
+      coefficients: [-0.044133, 0.021100]
+    - image_feature:
+        type: haar_vert3
+        rect: [2, 1, 11, 6]
+      thresholds: [3115.975]
+      coefficients: [0.020382, -0.052276]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 3, 4, 14]
+      thresholds: [1118.239]
+      coefficients: [0.001015, -0.880098]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 18, 14, 5]
+      thresholds: [-367.953]
+      coefficients: [-0.037464, 0.022890]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 9, 13, 4]
+      thresholds: [-107.180]
+      coefficients: [0.346297, -0.335574]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 10, 13, 4]
+      thresholds: [18.971]
+      coefficients: [0.143491, -0.458650]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 1, 14, 16]
+      thresholds: [-257.128]
+      coefficients: [-0.114948, 0.338988]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 12, 11, 12]
+      thresholds: [-552.461]
+      coefficients: [-0.151711, 0.213646]
+    - image_feature:
+        type: haar_vert2
+        rect: [21, 12, 1, 12]
+      thresholds: [-160.439]
+      coefficients: [-0.164153, 0.123319]
+    - image_feature:
+        type: haar_vert2
+        rect: [19, 12, 4, 2]
+      thresholds: [38.360]
+      coefficients: [0.036334, -0.391552]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 3, 20, 12]
+      thresholds: [-438.127]
+      coefficients: [0.146223, -0.081108]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 11, 10, 6]
+      thresholds: [150.953]
+      coefficients: [0.016230, -0.500759]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 13, 3, 4]
+      thresholds: [-76.594]
+      coefficients: [-0.120444, 0.062661]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 7, 10, 6]
+      thresholds: [-543.582]
+      coefficients: [0.210396, -0.030253]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 15, 11, 8]
+      thresholds: [-367.134]
+      coefficients: [-0.133249, 0.041917]
+    - image_feature:
+        type: haar_diag
+        rect: [16, 3, 8, 16]
+      thresholds: [-293.377]
+      coefficients: [-0.137573, 0.033613]
+    - image_feature:
+        type: haar_vert2
+        rect: [17, 21, 7, 2]
+      thresholds: [6.113]
+      coefficients: [-0.046819, 0.078499]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 8, 1, 10]
+      thresholds: [-321.332]
+      coefficients: [-0.233839, 0.015705]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 6, 4, 4]
+      thresholds: [-105.389]
+      coefficients: [0.185264, -0.018710]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 2, 6, 16]
+      thresholds: [-108.362]
+      coefficients: [0.025356, -0.127129]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 5, 6, 6]
+      thresholds: [134.597]
+      coefficients: [0.061783, -0.048812]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 10, 20, 6]
+      thresholds: [-49.912]
+      coefficients: [0.018690, -0.162884]
+    - image_feature:
+        type: haar_horiz2
+        rect: [19, 1, 2, 7]
+      thresholds: [148.532]
+      coefficients: [-0.003717, 0.803138]
+    - image_feature:
+        type: haar_horiz3
+        rect: [8, 10, 12, 3]
+      thresholds: [742.998]
+      coefficients: [-0.073390, 0.037596]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 14, 4, 2]
+      thresholds: [-63.415]
+      coefficients: [-0.332274, 0.008127]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 13, 4, 2]
+      thresholds: [-71.812]
+      coefficients: [-0.327534, 0.008263]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 11, 6, 6]
+      thresholds: [-276.863]
+      coefficients: [-0.041740, 0.052474]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 12, 6, 3]
+      thresholds: [-124.770]
+      coefficients: [-0.206072, 0.010738]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 16, 3, 4]
+      thresholds: [-1.663]
+      coefficients: [-0.030312, 0.066311]
+- name: left eye (left)
+  mean_position: {x: 14.772, y: 23.562}
+  basis_vectors:
+  - {x: -0.046, y: 0.053}
+  - {x: -0.110, y: -0.136}
+  - {x: 0.016, y: 0.254}
+  - {x: -0.214, y: 0.119}
+  - {x: 0.154, y: 0.060}
+  - {x: -0.186, y: 0.160}
+  - {x: -0.194, y: -0.099}
+  - {x: -0.045, y: 0.094}
+  - {x: -0.097, y: -0.060}
+  - {x: -0.015, y: 0.068}
+  - {x: -0.011, y: -0.026}
+  - {x: 0.048, y: 0.029}
+  - {x: 0.040, y: -0.100}
+  - {x: 0.171, y: -0.079}
+  - {x: -0.022, y: 0.125}
+  locator:
+    x:
+    - image_feature:
+        type: haar_diag
+        rect: [14, 10, 4, 14]
+      thresholds: [19.079]
+      coefficients: [0.249794, -0.256235]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 1, 6, 21]
+      thresholds: [-439.365]
+      coefficients: [-0.216451, 0.149639]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 6, 4, 18]
+      thresholds: [-90.845]
+      coefficients: [0.231643, -0.081537]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 2, 4, 19]
+      thresholds: [-198.978]
+      coefficients: [0.114813, -0.111590]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 9, 4, 5]
+      thresholds: [5.432]
+      coefficients: [0.186568, -0.056850]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 0, 6, 11]
+      thresholds: [-207.181]
+      coefficients: [0.079770, -0.104059]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 0, 3, 8]
+      thresholds: [92.657]
+      coefficients: [-0.053394, 0.108611]
+    - image_feature:
+        type: haar_horiz2
+        rect: [17, 4, 6, 5]
+      thresholds: [-282.233]
+      coefficients: [0.095319, -0.045972]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 13, 4, 2]
+      thresholds: [77.999]
+      coefficients: [0.017259, -0.230252]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 6, 2, 10]
+      thresholds: [-16.205]
+      coefficients: [0.137215, -0.026689]
+    - image_feature:
+        type: haar_horiz3
+        rect: [4, 11, 18, 11]
+      thresholds: [9821.533]
+      coefficients: [-0.034295, 0.097182]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 0, 4, 14]
+      thresholds: [-54.600]
+      coefficients: [-0.035090, 0.080664]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 10, 4, 14]
+      thresholds: [95.781]
+      coefficients: [0.036889, -0.071110]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 7, 8, 14]
+      thresholds: [-696.057]
+      coefficients: [0.613535, -0.004270]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 3, 6, 17]
+      thresholds: [-685.720]
+      coefficients: [-0.129942, 0.015436]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 3, 5, 20]
+      thresholds: [-592.925]
+      coefficients: [0.037333, -0.059974]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 2, 4, 12]
+      thresholds: [-105.094]
+      coefficients: [0.067670, -0.025463]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 3, 2, 13]
+      thresholds: [-8.583]
+      coefficients: [0.053147, -0.029991]
+    - image_feature:
+        type: haar_horiz3
+        rect: [18, 11, 6, 3]
+      thresholds: [624.056]
+      coefficients: [-0.036541, 0.042968]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 2, 8, 10]
+      thresholds: [-465.136]
+      coefficients: [0.173158, -0.007748]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 6, 18, 9]
+      thresholds: [-1167.027]
+      coefficients: [-0.172010, 0.007775]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 8, 2, 10]
+      thresholds: [-116.842]
+      coefficients: [0.030710, -0.039520]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 9, 4, 14]
+      thresholds: [-1639.210]
+      coefficients: [-0.309456, 0.003938]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 1, 10, 14]
+      thresholds: [-7378.977]
+      coefficients: [-0.151873, 0.007580]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 18, 6, 4]
+      thresholds: [-223.857]
+      coefficients: [0.198842, -0.005962]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 12, 6]
+      thresholds: [-286.420]
+      coefficients: [0.350134, -0.472991]
+    - image_feature:
+        type: haar_vert2
+        rect: [16, 6, 1, 10]
+      thresholds: [-48.916]
+      coefficients: [0.363116, -0.209339]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 11, 11, 4]
+      thresholds: [123.795]
+      coefficients: [0.061516, -0.696619]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 12, 11, 12]
+      thresholds: [-1194.282]
+      coefficients: [-0.155580, 0.220101]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 7, 11, 8]
+      thresholds: [-852.737]
+      coefficients: [0.369203, -0.073330]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 0, 10, 4]
+      thresholds: [10.802]
+      coefficients: [-0.113038, 0.166683]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 13, 5, 4]
+      thresholds: [-131.223]
+      coefficients: [-0.129286, 0.090889]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 13, 4, 2]
+      thresholds: [-52.669]
+      coefficients: [-0.264380, 0.033696]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 11, 2, 6]
+      thresholds: [63.015]
+      coefficients: [0.014620, -0.511377]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 7, 20, 6]
+      thresholds: [-816.023]
+      coefficients: [0.270251, -0.028208]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 2, 2, 10]
+      thresholds: [372.075]
+      coefficients: [0.051078, -0.119519]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 10, 20, 14]
+      thresholds: [-1983.450]
+      coefficients: [-0.038645, 0.121341]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 12, 3, 2]
+      thresholds: [29.092]
+      coefficients: [0.023711, -0.187508]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 13, 16, 2]
+      thresholds: [116.883]
+      coefficients: [0.007094, -0.539182]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 7, 4, 2]
+      thresholds: [-54.359]
+      coefficients: [0.260555, -0.014486]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 1, 6, 8]
+      thresholds: [414.214]
+      coefficients: [0.040522, -0.083910]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 6, 2, 4]
+      thresholds: [-38.492]
+      coefficients: [0.219207, -0.015193]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 0, 21, 2]
+      thresholds: [81.259]
+      coefficients: [-0.018117, 0.165168]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 5, 18, 6]
+      thresholds: [-97.909]
+      coefficients: [-0.043086, 0.056859]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 18, 5, 6]
+      thresholds: [0.337]
+      coefficients: [-0.065066, 0.033285]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 10, 17, 10]
+      thresholds: [-1287.145]
+      coefficients: [-0.024628, 0.088830]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 11, 21, 6]
+      thresholds: [-63.145]
+      coefficients: [0.009292, -0.247165]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 13, 2, 4]
+      thresholds: [-22.939]
+      coefficients: [-0.157712, 0.012148]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 6, 2, 3]
+      thresholds: [73.634]
+      coefficients: [-0.007566, 0.244198]
+    - image_feature:
+        type: haar_diag
+        rect: [15, 0, 8, 12]
+      thresholds: [-740.750]
+      coefficients: [0.218183, -0.007736]
+- name: left eye (right)
+  mean_position: {x: 22.664, y: 23.444}
+  basis_vectors:
+  - {x: -0.008, y: 0.086}
+  - {x: -0.015, y: -0.161}
+  - {x: 0.055, y: 0.168}
+  - {x: -0.149, y: 0.056}
+  - {x: 0.166, y: 0.070}
+  - {x: -0.105, y: 0.095}
+  - {x: -0.144, y: -0.085}
+  - {x: -0.043, y: 0.002}
+  - {x: 0.087, y: 0.044}
+  - {x: -0.095, y: 0.074}
+  - {x: -0.125, y: -0.032}
+  - {x: -0.075, y: 0.059}
+  - {x: 0.082, y: -0.010}
+  - {x: -0.138, y: -0.022}
+  - {x: 0.057, y: 0.059}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 10, 4, 8]
+      thresholds: [7.376]
+      coefficients: [0.202283, -0.284757]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 5, 10, 5]
+      thresholds: [-47.940]
+      coefficients: [-0.191625, 0.223814]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 10, 4, 4]
+      thresholds: [-49.772]
+      coefficients: [0.284477, -0.069174]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 6, 10, 10]
+      thresholds: [-665.407]
+      coefficients: [-0.220665, 0.075236]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 2, 6, 12]
+      thresholds: [152.687]
+      coefficients: [0.044528, -0.241218]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 22, 14, 2]
+      thresholds: [-89.889]
+      coefficients: [-0.179967, 0.044768]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 2, 6, 18]
+      thresholds: [-258.548]
+      coefficients: [0.128672, -0.056256]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 0, 8, 18]
+      thresholds: [329.758]
+      coefficients: [-0.034900, 0.202206]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 6, 16, 7]
+      thresholds: [-2087.091]
+      coefficients: [-0.124882, 0.044699]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 0, 6, 18]
+      thresholds: [-274.932]
+      coefficients: [-0.229990, 0.023492]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 0, 4, 8]
+      thresholds: [-135.813]
+      coefficients: [-0.106152, 0.032948]
+    - image_feature:
+        type: haar_horiz3
+        rect: [6, 8, 18, 5]
+      thresholds: [2313.831]
+      coefficients: [0.113655, -0.027288]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 20, 4, 3]
+      thresholds: [38.262]
+      coefficients: [-0.035281, 0.069454]
+    - image_feature:
+        type: haar_horiz3
+        rect: [1, 5, 21, 9]
+      thresholds: [12418.693]
+      coefficients: [0.024310, -0.107375]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 8, 2, 7]
+      thresholds: [-7.915]
+      coefficients: [0.090309, -0.022903]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 11, 12, 11]
+      thresholds: [-94.558]
+      coefficients: [0.036827, -0.057614]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 1, 4, 15]
+      thresholds: [261.881]
+      coefficients: [0.010198, -0.201514]
+    - image_feature:
+        type: haar_diag
+        rect: [20, 6, 4, 4]
+      thresholds: [63.117]
+      coefficients: [-0.012184, 0.143371]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 0, 6, 18]
+      thresholds: [-511.849]
+      coefficients: [-0.220341, 0.006753]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 13, 1, 10]
+      thresholds: [26.044]
+      coefficients: [-0.007053, 0.201491]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 9, 16, 1]
+      thresholds: [-216.337]
+      coefficients: [-0.036129, 0.036693]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 1, 10, 16]
+      thresholds: [-71.797]
+      coefficients: [0.006055, -0.206524]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 13, 16, 11]
+      thresholds: [2535.783]
+      coefficients: [0.009174, -0.129454]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 5, 1, 16]
+      thresholds: [99.712]
+      coefficients: [0.023691, -0.049246]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 8, 20]
+      thresholds: [-1152.089]
+      coefficients: [0.149062, -0.006977]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 8, 10, 8]
+      thresholds: [-423.379]
+      coefficients: [0.370407, -0.403162]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 2, 6, 2]
+      thresholds: [17.733]
+      coefficients: [-0.205819, 0.371503]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 15, 17, 4]
+      thresholds: [-284.655]
+      coefficients: [-0.295957, 0.178215]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 11, 14, 4]
+      thresholds: [119.235]
+      coefficients: [0.066954, -0.555806]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 8, 10, 6]
+      thresholds: [-501.773]
+      coefficients: [0.343069, -0.084035]
+    - image_feature:
+        type: haar_vert2
+        rect: [22, 0, 1, 8]
+      thresholds: [4.180]
+      coefficients: [-0.212343, 0.102247]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 2, 10, 1]
+      thresholds: [-107.446]
+      coefficients: [0.273750, -0.061501]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 15, 11, 8]
+      thresholds: [-743.367]
+      coefficients: [-0.256442, 0.047744]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 0, 17, 18]
+      thresholds: [674.468]
+      coefficients: [0.156692, -0.053382]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 6, 14, 12]
+      thresholds: [-944.590]
+      coefficients: [-0.048132, 0.157867]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 12, 18, 4]
+      thresholds: [146.420]
+      coefficients: [0.015649, -0.454440]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 13, 8, 4]
+      thresholds: [-187.435]
+      coefficients: [-0.066834, 0.088835]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 2, 4, 8]
+      thresholds: [188.461]
+      coefficients: [-0.010954, 0.424867]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 3, 8, 4]
+      thresholds: [-47.505]
+      coefficients: [-0.147941, 0.028113]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 20, 4, 3]
+      thresholds: [49.239]
+      coefficients: [-0.039213, 0.097908]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 15, 17, 4]
+      thresholds: [-51.323]
+      coefficients: [-0.028690, 0.120296]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 13, 10, 4]
+      thresholds: [342.698]
+      coefficients: [0.003359, -0.887736]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 7, 20, 4]
+      thresholds: [-892.218]
+      coefficients: [-0.047420, 0.061180]
+    - image_feature:
+        type: haar_vert2
+        rect: [20, 14, 4, 10]
+      thresholds: [-81.330]
+      coefficients: [-0.047986, 0.058389]
+    - image_feature:
+        type: haar_horiz3
+        rect: [9, 0, 12, 1]
+      thresholds: [980.368]
+      coefficients: [0.010832, -0.247135]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 5, 10, 14]
+      thresholds: [368.787]
+      coefficients: [-0.032279, 0.082021]
+    - image_feature:
+        type: haar_vert2
+        rect: [19, 12, 4, 2]
+      thresholds: [14.785]
+      coefficients: [0.022476, -0.095655]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 14, 4, 1]
+      thresholds: [-43.016]
+      coefficients: [-0.185767, 0.010307]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 2, 6, 2]
+      thresholds: [17.733]
+      coefficients: [0.033960, -0.062305]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 15, 6, 2]
+      thresholds: [-49.717]
+      coefficients: [-0.105131, 0.016936]
+- name: right eye (left)
+  mean_position: {x: 37.760, y: 23.537}
+  basis_vectors:
+  - {x: 0.016, y: 0.128}
+  - {x: 0.182, y: -0.150}
+  - {x: 0.021, y: 0.038}
+  - {x: -0.132, y: 0.018}
+  - {x: 0.160, y: 0.182}
+  - {x: 0.031, y: 0.083}
+  - {x: 0.002, y: 0.014}
+  - {x: -0.065, y: 0.026}
+  - {x: -0.122, y: 0.041}
+  - {x: 0.023, y: 0.147}
+  - {x: 0.060, y: -0.030}
+  - {x: -0.013, y: 0.104}
+  - {x: -0.164, y: 0.062}
+  - {x: -0.048, y: 0.063}
+  - {x: -0.112, y: -0.005}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 8, 6, 4]
+      thresholds: [12.187]
+      coefficients: [-0.233381, 0.282466]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 10, 4, 14]
+      thresholds: [12.559]
+      coefficients: [0.179001, -0.195708]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 5, 6, 5]
+      thresholds: [60.730]
+      coefficients: [-0.183797, 0.118554]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 5, 14, 15]
+      thresholds: [749.306]
+      coefficients: [0.079540, -0.189799]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 8, 20, 12]
+      thresholds: [-799.537]
+      coefficients: [0.232197, -0.043559]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 11, 6, 12]
+      thresholds: [49.497]
+      coefficients: [0.043122, -0.167498]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 7, 16, 12]
+      thresholds: [802.898]
+      coefficients: [-0.077571, 0.096923]
+    - image_feature:
+        type: haar_diag
+        rect: [13, 20, 8, 4]
+      thresholds: [39.029]
+      coefficients: [0.044335, -0.127478]
+    - image_feature:
+        type: haar_vert2
+        rect: [23, 3, 1, 14]
+      thresholds: [-130.855]
+      coefficients: [0.150658, -0.031938]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 5, 6, 5]
+      thresholds: [-12.876]
+      coefficients: [0.072964, -0.055706]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 9, 2, 6]
+      thresholds: [-22.128]
+      coefficients: [0.045537, -0.070361]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 20, 14, 2]
+      thresholds: [-12.117]
+      coefficients: [0.049711, -0.059271]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 7, 4, 15]
+      thresholds: [113.010]
+      coefficients: [0.015740, -0.174286]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 16, 8, 8]
+      thresholds: [72.892]
+      coefficients: [0.049344, -0.049946]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 3, 6, 3]
+      thresholds: [125.938]
+      coefficients: [-0.013477, 0.167287]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 17, 8, 5]
+      thresholds: [282.075]
+      coefficients: [0.007215, -0.275177]
+    - image_feature:
+        type: haar_diag
+        rect: [13, 6, 4, 18]
+      thresholds: [-162.779]
+      coefficients: [0.127443, -0.015591]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 13, 2, 8]
+      thresholds: [3.503]
+      coefficients: [0.030525, -0.058027]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 9, 6, 15]
+      thresholds: [857.049]
+      coefficients: [0.019872, -0.083099]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 9, 6, 15]
+      thresholds: [-448.265]
+      coefficients: [-0.122611, 0.013134]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 5, 8, 9]
+      thresholds: [238.818]
+      coefficients: [-0.013782, 0.098235]
+    - image_feature:
+        type: haar_horiz2
+        rect: [22, 16, 2, 8]
+      thresholds: [-124.861]
+      coefficients: [0.296536, -0.004380]
+    - image_feature:
+        type: haar_horiz3
+        rect: [6, 0, 9, 10]
+      thresholds: [4202.165]
+      coefficients: [-0.025227, 0.048001]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 0, 1, 20]
+      thresholds: [25.790]
+      coefficients: [-0.045300, 0.028727]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 13, 4, 2]
+      thresholds: [38.132]
+      coefficients: [0.011701, -0.103259]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 3, 12, 14]
+      thresholds: [356.421]
+      coefficients: [0.519751, -0.337928]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 10, 13, 4]
+      thresholds: [42.123]
+      coefficients: [0.190921, -0.482922]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 1, 10, 4]
+      thresholds: [87.270]
+      coefficients: [-0.145668, 0.290783]
+    - image_feature:
+        type: haar_vert2
+        rect: [17, 14, 6, 4]
+      thresholds: [-152.490]
+      coefficients: [-0.266734, 0.115307]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 1, 10, 16]
+      thresholds: [-90.262]
+      coefficients: [0.455076, -0.053515]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 10, 20, 6]
+      thresholds: [153.379]
+      coefficients: [0.047858, -0.389475]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 15, 12, 8]
+      thresholds: [-920.156]
+      coefficients: [-0.311965, 0.047635]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 5, 24, 19]
+      thresholds: [-1177.072]
+      coefficients: [0.194119, -0.049166]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 13, 2, 4]
+      thresholds: [13.737]
+      coefficients: [0.055687, -0.145679]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 7, 20, 6]
+      thresholds: [-881.118]
+      coefficients: [0.352605, -0.019070]
+    - image_feature:
+        type: haar_horiz3
+        rect: [14, 12, 9, 6]
+      thresholds: [1503.403]
+      coefficients: [-0.194680, 0.028996]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 1, 8, 2]
+      thresholds: [101.712]
+      coefficients: [-0.025306, 0.207299]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 11, 10, 6]
+      thresholds: [227.094]
+      coefficients: [0.010196, -0.457924]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 5, 16, 18]
+      thresholds: [-557.378]
+      coefficients: [0.291844, -0.011961]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 13, 11, 2]
+      thresholds: [10.839]
+      coefficients: [0.027750, -0.120634]
+    - image_feature:
+        type: haar_vert3
+        rect: [14, 21, 2, 3]
+      thresholds: [467.132]
+      coefficients: [0.010783, -0.305104]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 14, 9, 10]
+      thresholds: [-62.519]
+      coefficients: [-0.037596, 0.079089]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 0, 8, 2]
+      thresholds: [10.065]
+      coefficients: [0.052256, -0.058890]
+    - image_feature:
+        type: haar_horiz3
+        rect: [0, 11, 24, 4]
+      thresholds: [2511.173]
+      coefficients: [-0.165490, 0.014309]
+    - image_feature:
+        type: haar_diag
+        rect: [15, 14, 4, 6]
+      thresholds: [-82.041]
+      coefficients: [-0.116626, 0.018706]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 15, 4, 2]
+      thresholds: [69.150]
+      coefficients: [0.006619, -0.333204]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 1, 16, 14]
+      thresholds: [-1202.639]
+      coefficients: [0.473115, -0.004299]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 6, 4, 5]
+      thresholds: [-188.032]
+      coefficients: [0.276684, -0.006798]
+    - image_feature:
+        type: haar_diag
+        rect: [1, 13, 4, 10]
+      thresholds: [90.434]
+      coefficients: [-0.017773, 0.096834]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 3, 12, 14]
+      thresholds: [357.003]
+      coefficients: [-0.050782, 0.033050]
+- name: right eye (right)
+  mean_position: {x: 45.606, y: 23.648}
+  basis_vectors:
+  - {x: 0.056, y: 0.140}
+  - {x: 0.260, y: -0.123}
+  - {x: 0.038, y: -0.012}
+  - {x: -0.062, y: 0.039}
+  - {x: 0.196, y: 0.281}
+  - {x: 0.162, y: 0.105}
+  - {x: 0.015, y: 0.060}
+  - {x: -0.046, y: 0.106}
+  - {x: -0.075, y: 0.002}
+  - {x: -0.050, y: 0.137}
+  - {x: -0.035, y: -0.016}
+  - {x: -0.117, y: 0.124}
+  - {x: -0.075, y: 0.036}
+  - {x: -0.275, y: -0.041}
+  - {x: 0.008, y: 0.031}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 10, 4, 8]
+      thresholds: [-17.350]
+      coefficients: [0.174323, -0.305218]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 4, 4, 14]
+      thresholds: [-33.958]
+      coefficients: [0.209160, -0.147386]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 2, 16, 19]
+      thresholds: [-288.394]
+      coefficients: [0.117905, -0.154548]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 7, 12, 10]
+      thresholds: [1242.668]
+      coefficients: [0.043567, -0.263128]
+    - image_feature:
+        type: haar_horiz2
+        rect: [19, 4, 4, 4]
+      thresholds: [54.404]
+      coefficients: [0.091486, -0.120067]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 10, 4, 4]
+      thresholds: [-98.407]
+      coefficients: [0.214554, -0.037486]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 4, 2, 20]
+      thresholds: [-294.605]
+      coefficients: [-0.070799, 0.095096]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 10, 6, 13]
+      thresholds: [775.952]
+      coefficients: [-0.014707, 0.407453]
+    - image_feature:
+        type: haar_diag
+        rect: [12, 9, 4, 10]
+      thresholds: [-12.741]
+      coefficients: [0.043406, -0.119871]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 13, 4, 10]
+      thresholds: [-47.373]
+      coefficients: [-0.043986, 0.097247]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 8, 8, 12]
+      thresholds: [-81.282]
+      coefficients: [-0.058072, 0.060893]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 7, 12, 17]
+      thresholds: [607.378]
+      coefficients: [0.033546, -0.095705]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 10, 12, 5]
+      thresholds: [82.477]
+      coefficients: [0.017417, -0.171196]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 0, 6, 9]
+      thresholds: [-65.367]
+      coefficients: [0.166200, -0.017040]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 18, 4, 4]
+      thresholds: [-67.145]
+      coefficients: [-0.134212, 0.021110]
+    - image_feature:
+        type: haar_vert2
+        rect: [16, 0, 1, 8]
+      thresholds: [26.537]
+      coefficients: [0.034214, -0.066137]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 3, 4, 12]
+      thresholds: [300.544]
+      coefficients: [-0.011467, 0.179979]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 1, 2, 11]
+      thresholds: [-20.769]
+      coefficients: [0.031541, -0.073965]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 17, 10, 4]
+      thresholds: [38.963]
+      coefficients: [0.033101, -0.067959]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 0, 4, 14]
+      thresholds: [-321.667]
+      coefficients: [0.345464, -0.005140]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 7, 2, 16]
+      thresholds: [136.060]
+      coefficients: [-0.015480, 0.103072]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 10, 4, 14]
+      thresholds: [138.021]
+      coefficients: [-0.014155, 0.114099]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 0, 2, 13]
+      thresholds: [2.264]
+      coefficients: [0.022438, -0.061431]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 10, 3, 4]
+      thresholds: [115.421]
+      coefficients: [0.013557, -0.099716]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 4, 4, 13]
+      thresholds: [352.509]
+      coefficients: [-0.003836, 0.323286]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 12, 6]
+      thresholds: [-242.537]
+      coefficients: [0.369158, -0.535689]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 7, 11, 8]
+      thresholds: [-502.672]
+      coefficients: [0.511022, -0.185443]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 9, 17, 6]
+      thresholds: [107.188]
+      coefficients: [0.110938, -0.411796]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 14, 17, 8]
+      thresholds: [-679.536]
+      coefficients: [-0.184209, 0.167160]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 6, 12, 8]
+      thresholds: [-598.396]
+      coefficients: [0.439675, -0.047553]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 10, 9, 6]
+      thresholds: [125.510]
+      coefficients: [0.038916, -0.438421]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 0, 3, 4]
+      thresholds: [29.663]
+      coefficients: [-0.077715, 0.165980]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 13, 19, 6]
+      thresholds: [-431.009]
+      coefficients: [-0.055012, 0.151031]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 12, 18, 4]
+      thresholds: [168.517]
+      coefficients: [0.009963, -0.639462]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 2, 3, 14]
+      thresholds: [215.000]
+      coefficients: [0.103951, -0.054050]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 22, 14, 2]
+      thresholds: [-199.416]
+      coefficients: [0.074512, -0.050533]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 8, 1, 8]
+      thresholds: [36.602]
+      coefficients: [0.031274, -0.108597]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 1, 8, 4]
+      thresholds: [-83.984]
+      coefficients: [0.206507, -0.015529]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 6, 16, 18]
+      thresholds: [-7125.428]
+      coefficients: [-0.167450, 0.016024]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 2, 9, 14]
+      thresholds: [-904.341]
+      coefficients: [0.213420, -0.012040]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 13, 4, 2]
+      thresholds: [36.486]
+      coefficients: [0.015935, -0.137930]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 10, 12, 6]
+      thresholds: [-360.921]
+      coefficients: [-0.071810, 0.030976]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 4, 10, 11]
+      thresholds: [204.386]
+      coefficients: [0.089924, -0.022924]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 1, 12, 10]
+      thresholds: [-1865.492]
+      coefficients: [0.096821, -0.022119]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 11, 14, 4]
+      thresholds: [175.407]
+      coefficients: [0.009940, -0.161095]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 12, 6]
+      thresholds: [-243.494]
+      coefficients: [-0.036132, 0.054578]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 13, 4, 1]
+      thresholds: [11.111]
+      coefficients: [0.038038, -0.046500]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 20, 13, 4]
+      thresholds: [-53.341]
+      coefficients: [-0.054417, 0.027682]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 6, 4, 5]
+      thresholds: [-220.486]
+      coefficients: [0.171288, -0.008076]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 2, 4, 8]
+      thresholds: [285.014]
+      coefficients: [-0.007806, 0.156032]
+- name: right temple
+  mean_position: {x: 51.215, y: 24.044}
+  basis_vectors:
+  - {x: 0.066, y: 0.169}
+  - {x: 0.313, y: -0.115}
+  - {x: 0.013, y: -0.060}
+  - {x: -0.027, y: 0.056}
+  - {x: 0.236, y: 0.374}
+  - {x: 0.270, y: 0.076}
+  - {x: 0.073, y: 0.051}
+  - {x: -0.036, y: 0.181}
+  - {x: -0.445, y: 0.075}
+  - {x: -0.232, y: 0.079}
+  - {x: 0.054, y: -0.089}
+  - {x: 0.100, y: 0.084}
+  - {x: -0.014, y: 0.033}
+  - {x: 0.074, y: -0.045}
+  - {x: -0.190, y: -0.137}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 2, 4, 17]
+      thresholds: [455.721]
+      coefficients: [-0.160693, 0.339376]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 0, 4, 16]
+      thresholds: [6.167]
+      coefficients: [0.145101, -0.161948]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 2, 2, 20]
+      thresholds: [202.428]
+      coefficients: [0.106888, -0.187795]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 8, 6, 13]
+      thresholds: [-125.973]
+      coefficients: [-0.126217, 0.113218]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 12]
+      thresholds: [-85.593]
+      coefficients: [-0.081992, 0.104558]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 9, 4, 5]
+      thresholds: [93.258]
+      coefficients: [-0.034454, 0.257935]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 1, 4, 5]
+      thresholds: [201.380]
+      coefficients: [0.039183, -0.177472]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 2, 4, 9]
+      thresholds: [-52.399]
+      coefficients: [0.049847, -0.117593]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 9, 5, 14]
+      thresholds: [-958.085]
+      coefficients: [-0.109067, 0.050688]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 14, 4, 7]
+      thresholds: [335.287]
+      coefficients: [-0.012691, 0.325149]
+    - image_feature:
+        type: haar_diag
+        rect: [1, 12, 6, 12]
+      thresholds: [79.621]
+      coefficients: [0.027559, -0.127231]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 0, 14, 1]
+      thresholds: [-354.653]
+      coefficients: [0.158714, -0.017039]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 15, 14, 8]
+      thresholds: [-993.614]
+      coefficients: [-0.153086, 0.016125]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 4, 4, 1]
+      thresholds: [-0.157]
+      coefficients: [-0.081556, 0.029631]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 3, 6, 13]
+      thresholds: [714.424]
+      coefficients: [-0.009552, 0.215142]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 0, 6, 22]
+      thresholds: [-644.489]
+      coefficients: [0.045938, -0.053610]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 2, 4, 12]
+      thresholds: [-61.279]
+      coefficients: [0.072816, -0.028244]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 7, 10, 12]
+      thresholds: [7176.259]
+      coefficients: [-0.008148, 0.230535]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 13, 11, 4]
+      thresholds: [-250.087]
+      coefficients: [-0.056224, 0.033700]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 6, 2, 14]
+      thresholds: [103.642]
+      coefficients: [-0.006806, 0.227013]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 0, 4, 6]
+      thresholds: [278.916]
+      coefficients: [0.021889, -0.063226]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 4, 13, 20]
+      thresholds: [427.412]
+      coefficients: [-0.016056, 0.078770]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 6, 6, 16]
+      thresholds: [-391.261]
+      coefficients: [-0.081235, 0.016954]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 2, 6, 21]
+      thresholds: [786.009]
+      coefficients: [0.005840, -0.202276]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 0, 8, 5]
+      thresholds: [-769.623]
+      coefficients: [0.209882, -0.005457]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 8, 13, 6]
+      thresholds: [-242.076]
+      coefficients: [0.428304, -0.353673]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 9, 15, 6]
+      thresholds: [-14.450]
+      coefficients: [0.141276, -0.508889]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 6, 6, 8]
+      thresholds: [-226.144]
+      coefficients: [0.357091, -0.092548]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 14, 13, 6]
+      thresholds: [-315.072]
+      coefficients: [-0.171576, 0.138679]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 11, 14, 4]
+      thresholds: [205.606]
+      coefficients: [0.030440, -0.583992]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 10, 3, 4]
+      thresholds: [4.329]
+      coefficients: [0.076443, -0.155494]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 0, 21, 14]
+      thresholds: [2227.925]
+      coefficients: [0.062991, -0.149165]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 6, 17, 8]
+      thresholds: [-1065.199]
+      coefficients: [0.242215, -0.031672]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 0, 18, 2]
+      thresholds: [73.218]
+      coefficients: [-0.038230, 0.145881]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 10, 8, 8]
+      thresholds: [329.338]
+      coefficients: [0.007718, -0.645411]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 0, 15, 8]
+      thresholds: [702.579]
+      coefficients: [0.039399, -0.117722]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 16, 20, 8]
+      thresholds: [-859.236]
+      coefficients: [-0.154708, 0.025709]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 2, 3, 12]
+      thresholds: [-193.021]
+      coefficients: [0.246185, -0.015046]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 13, 4, 1]
+      thresholds: [19.514]
+      coefficients: [0.022471, -0.154887]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 2, 6, 21]
+      thresholds: [-101.783]
+      coefficients: [0.053389, -0.060167]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 12, 2, 4]
+      thresholds: [16.361]
+      coefficients: [0.026120, -0.113080]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 22, 4, 2]
+      thresholds: [-28.583]
+      coefficients: [0.111918, -0.024847]
+    - image_feature:
+        type: haar_horiz3
+        rect: [21, 1, 3, 1]
+      thresholds: [254.000]
+      coefficients: [-0.014215, 0.194321]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 9, 18, 10]
+      thresholds: [-1070.004]
+      coefficients: [-0.053477, 0.046848]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 11, 8, 12]
+      thresholds: [-36.925]
+      coefficients: [0.026626, -0.111944]
+    - image_feature:
+        type: haar_horiz3
+        rect: [21, 1, 3, 1]
+      thresholds: [254.000]
+      coefficients: [-0.011417, 0.176929]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 13, 11, 2]
+      thresholds: [71.750]
+      coefficients: [0.012795, -0.298641]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 11, 10, 8]
+      thresholds: [-384.694]
+      coefficients: [-0.018002, 0.102387]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 16, 8, 8]
+      thresholds: [120.900]
+      coefficients: [-0.032942, 0.063836]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 19, 2, 4]
+      thresholds: [-14.960]
+      coefficients: [-0.116711, 0.017513]
+- name: nose (center)
+  mean_position: {x: 30.135, y: 34.736}
+  basis_vectors:
+  - {x: -0.030, y: 0.269}
+  - {x: 0.098, y: -0.113}
+  - {x: 0.187, y: -0.097}
+  - {x: -0.159, y: -0.509}
+  - {x: 0.059, y: -0.269}
+  - {x: -0.178, y: 0.325}
+  - {x: 0.219, y: -0.235}
+  - {x: -0.008, y: 0.136}
+  - {x: 0.316, y: -0.036}
+  - {x: 0.157, y: 0.123}
+  - {x: 0.126, y: 0.127}
+  - {x: 0.082, y: -0.006}
+  - {x: -0.107, y: -0.139}
+  - {x: -0.001, y: 0.279}
+  - {x: -0.220, y: 0.055}
+  locator:
+    x:
+    - image_feature:
+        type: haar_diag
+        rect: [1, 0, 22, 24]
+      thresholds: [-192.886]
+      coefficients: [-0.184777, 0.228430]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 0, 8, 15]
+      thresholds: [-326.790]
+      coefficients: [-0.279758, 0.103709]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 7, 4, 8]
+      thresholds: [25.713]
+      coefficients: [0.090597, -0.210999]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 1, 8, 20]
+      thresholds: [-97.888]
+      coefficients: [0.175550, -0.092323]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 1, 20, 18]
+      thresholds: [-1086.881]
+      coefficients: [-0.280660, 0.044181]
+    - image_feature:
+        type: haar_diag
+        rect: [12, 3, 6, 18]
+      thresholds: [34.705]
+      coefficients: [-0.107311, 0.080058]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 4, 4, 12]
+      thresholds: [-426.501]
+      coefficients: [0.398932, -0.018688]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 11, 10, 13]
+      thresholds: [-91.695]
+      coefficients: [0.129848, -0.058484]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 9, 8, 15]
+      thresholds: [-158.459]
+      coefficients: [0.039641, -0.137460]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 12, 12, 11]
+      thresholds: [-711.265]
+      coefficients: [0.145139, -0.030530]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 0, 8, 22]
+      thresholds: [571.285]
+      coefficients: [0.017986, -0.213900]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 3, 6, 15]
+      thresholds: [155.610]
+      coefficients: [0.073643, -0.066043]
+    - image_feature:
+        type: haar_diag
+        rect: [5, 6, 10, 18]
+      thresholds: [-1461.483]
+      coefficients: [-0.210394, 0.016358]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 7, 2, 10]
+      thresholds: [48.083]
+      coefficients: [-0.038295, 0.068638]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 10, 2, 9]
+      thresholds: [-62.214]
+      coefficients: [0.290394, -0.009873]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 7, 6, 6]
+      thresholds: [47.055]
+      coefficients: [0.039834, -0.062566]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 0, 7, 12]
+      thresholds: [-1555.104]
+      coefficients: [-0.212770, 0.009983]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 10, 12, 14]
+      thresholds: [265.565]
+      coefficients: [0.098776, -0.021025]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 0, 8, 2]
+      thresholds: [140.933]
+      coefficients: [0.027849, -0.067923]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 12, 6, 3]
+      thresholds: [-22.084]
+      coefficients: [0.040312, -0.045525]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 8, 2, 12]
+      thresholds: [97.614]
+      coefficients: [0.009681, -0.165089]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 2, 4, 9]
+      thresholds: [454.424]
+      coefficients: [-0.004207, 0.357716]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 9, 14, 4]
+      thresholds: [234.827]
+      coefficients: [0.023648, -0.061704]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 4, 6, 5]
+      thresholds: [152.079]
+      coefficients: [-0.021772, 0.061331]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 2, 6, 18]
+      thresholds: [-789.675]
+      coefficients: [-0.190267, 0.007217]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 2]
+      thresholds: [13.450]
+      coefficients: [-0.329538, 0.402959]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 13, 6, 6]
+      thresholds: [184.614]
+      coefficients: [0.197675, -0.321491]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 8, 7, 4]
+      thresholds: [165.135]
+      coefficients: [-0.078026, 0.585406]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 13, 10, 2]
+      thresholds: [12.222]
+      coefficients: [0.110391, -0.244543]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 12, 14, 1]
+      thresholds: [-86.777]
+      coefficients: [0.230006, -0.069678]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 8, 4, 2]
+      thresholds: [-23.556]
+      coefficients: [0.212121, -0.053097]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 5, 2]
+      thresholds: [58.170]
+      coefficients: [-0.026974, 0.366518]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 18, 7, 2]
+      thresholds: [-39.024]
+      coefficients: [-0.158763, 0.061851]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 13, 14, 8]
+      thresholds: [-432.781]
+      coefficients: [-0.165316, 0.043563]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 5, 5, 14]
+      thresholds: [1915.071]
+      coefficients: [0.023713, -0.289981]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 8, 4, 2]
+      thresholds: [54.187]
+      coefficients: [-0.011183, 0.559825]
+    - image_feature:
+        type: haar_diag
+        rect: [5, 6, 10, 4]
+      thresholds: [72.044]
+      coefficients: [-0.037727, 0.158400]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 8, 4, 4]
+      thresholds: [-70.665]
+      coefficients: [0.108835, -0.050261]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 3, 4, 12]
+      thresholds: [262.561]
+      coefficients: [0.036890, -0.125534]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 6, 14, 12]
+      thresholds: [-734.196]
+      coefficients: [-0.404342, 0.011093]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 10, 15, 2]
+      thresholds: [118.565]
+      coefficients: [-0.026710, 0.131430]
+    - image_feature:
+        type: haar_vert3
+        rect: [5, 1, 6, 18]
+      thresholds: [-224.030]
+      coefficients: [0.614288, -0.005059]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 8, 20]
+      thresholds: [-1015.128]
+      coefficients: [-0.166450, 0.017915]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 8, 7, 4]
+      thresholds: [-103.456]
+      coefficients: [0.071682, -0.035768]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 8, 4, 2]
+      thresholds: [31.891]
+      coefficients: [-0.012494, 0.230516]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 2, 4, 10]
+      thresholds: [468.804]
+      coefficients: [-0.011001, 0.241537]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 0, 14, 18]
+      thresholds: [-5004.077]
+      coefficients: [-0.752361, 0.003165]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 0, 4, 12]
+      thresholds: [-84.443]
+      coefficients: [-0.018954, 0.114732]
+    - image_feature:
+        type: haar_vert2
+        rect: [19, 4, 5, 6]
+      thresholds: [121.278]
+      coefficients: [0.010610, -0.229498]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 7, 7, 10]
+      thresholds: [49.652]
+      coefficients: [-0.088403, 0.024389]
+- name: nose (left)
+  mean_position: {x: 26.567, y: 36.821}
+  basis_vectors:
+  - {x: -0.060, y: 0.250}
+  - {x: 0.048, y: -0.073}
+  - {x: 0.212, y: 0.009}
+  - {x: -0.080, y: -0.240}
+  - {x: 0.113, y: -0.129}
+  - {x: -0.194, y: 0.127}
+  - {x: 0.248, y: 0.065}
+  - {x: 0.091, y: 0.108}
+  - {x: 0.172, y: 0.037}
+  - {x: 0.077, y: -0.028}
+  - {x: 0.000, y: -0.027}
+  - {x: 0.099, y: 0.018}
+  - {x: 0.057, y: 0.092}
+  - {x: -0.074, y: -0.158}
+  - {x: -0.177, y: -0.116}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 4, 2, 16]
+      thresholds: [-23.141]
+      coefficients: [0.249170, -0.164639]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 5, 10, 10]
+      thresholds: [174.621]
+      coefficients: [-0.145240, 0.151131]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 16, 18]
+      thresholds: [-278.212]
+      coefficients: [-0.136877, 0.116937]
+    - image_feature:
+        type: haar_diag
+        rect: [13, 6, 4, 8]
+      thresholds: [54.468]
+      coefficients: [0.066262, -0.209739]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 8, 10, 8]
+      thresholds: [83.679]
+      coefficients: [-0.169564, 0.074033]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 0, 4, 14]
+      thresholds: [-397.377]
+      coefficients: [0.527873, -0.017947]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 7, 14, 17]
+      thresholds: [52.982]
+      coefficients: [0.138614, -0.069450]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 2, 6, 16]
+      thresholds: [-446.288]
+      coefficients: [-0.203045, 0.033936]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 8, 2, 12]
+      thresholds: [-11.283]
+      coefficients: [0.082249, -0.073835]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 1, 10, 14]
+      thresholds: [-2038.050]
+      coefficients: [-0.387068, 0.015254]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 5, 6, 6]
+      thresholds: [120.658]
+      coefficients: [0.071840, -0.076464]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 4, 18, 18]
+      thresholds: [-2178.498]
+      coefficients: [-0.395942, 0.009903]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 3, 1, 10]
+      thresholds: [52.608]
+      coefficients: [-0.018240, 0.196816]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 7, 6, 13]
+      thresholds: [-10.609]
+      coefficients: [0.038954, -0.091301]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 7, 16, 17]
+      thresholds: [670.060]
+      coefficients: [0.115835, -0.024122]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 1, 12, 10]
+      thresholds: [-2469.313]
+      coefficients: [-0.371069, 0.007371]
+    - image_feature:
+        type: haar_diag
+        rect: [12, 9, 4, 10]
+      thresholds: [-21.358]
+      coefficients: [-0.035304, 0.069664]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 5, 2, 9]
+      thresholds: [72.251]
+      coefficients: [-0.022132, 0.104281]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 5, 2, 9]
+      thresholds: [-179.688]
+      coefficients: [0.647340, -0.003544]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 4, 4, 14]
+      thresholds: [-96.666]
+      coefficients: [0.039707, -0.057649]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 6, 4, 5]
+      thresholds: [-117.750]
+      coefficients: [0.125463, -0.018237]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 0, 4, 2]
+      thresholds: [-35.704]
+      coefficients: [-0.091429, 0.019166]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 2, 4, 17]
+      thresholds: [-944.365]
+      coefficients: [-0.375278, 0.004172]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 7, 8, 8]
+      thresholds: [-186.325]
+      coefficients: [-0.043796, 0.033301]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 1, 2, 8]
+      thresholds: [-3.308]
+      coefficients: [-0.017544, 0.084059]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 6, 11, 6]
+      thresholds: [185.239]
+      coefficients: [-0.326094, 0.456838]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 7, 5, 6]
+      thresholds: [0.194]
+      coefficients: [-0.412950, 0.184568]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 0, 21, 14]
+      thresholds: [-1368.058]
+      coefficients: [-0.284889, 0.179062]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 14, 21, 4]
+      thresholds: [-184.230]
+      coefficients: [-0.339371, 0.106719]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 6, 6, 4]
+      thresholds: [186.172]
+      coefficients: [-0.056044, 0.612334]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 18, 18, 6]
+      thresholds: [3.813]
+      coefficients: [0.224116, -0.098108]
+    - image_feature:
+        type: haar_diag
+        rect: [3, 10, 16, 6]
+      thresholds: [-99.121]
+      coefficients: [-0.114800, 0.151521]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 10, 8, 8]
+      thresholds: [302.149]
+      coefficients: [-0.077903, 0.170647]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 4, 9, 10]
+      thresholds: [-285.334]
+      coefficients: [-0.296845, 0.034458]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 2, 10, 6]
+      thresholds: [17.867]
+      coefficients: [0.117115, -0.066080]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 16, 5, 8]
+      thresholds: [176.927]
+      coefficients: [0.078801, -0.078796]
+    - image_feature:
+        type: haar_diag
+        rect: [18, 10, 6, 8]
+      thresholds: [195.297]
+      coefficients: [0.030701, -0.162819]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 7, 5, 2]
+      thresholds: [122.177]
+      coefficients: [-0.007519, 0.627966]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 17, 12, 2]
+      thresholds: [-199.899]
+      coefficients: [0.207931, -0.020053]
+    - image_feature:
+        type: haar_vert3
+        rect: [6, 10, 4, 9]
+      thresholds: [2746.482]
+      coefficients: [0.012036, -0.314509]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 5, 12, 6]
+      thresholds: [325.745]
+      coefficients: [-0.028064, 0.142212]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 5, 5, 10]
+      thresholds: [-112.650]
+      coefficients: [-0.207058, 0.014450]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 12, 6, 8]
+      thresholds: [-197.676]
+      coefficients: [0.146959, -0.020838]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 1, 10, 4]
+      thresholds: [-76.770]
+      coefficients: [-0.034502, 0.082798]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 3, 8, 4]
+      thresholds: [-571.836]
+      coefficients: [-0.318092, 0.008516]
+    - image_feature:
+        type: haar_vert2
+        rect: [13, 11, 6, 8]
+      thresholds: [-726.201]
+      coefficients: [-0.158611, 0.014205]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 12, 10, 4]
+      thresholds: [229.711]
+      coefficients: [0.024951, -0.093363]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 16, 20, 8]
+      thresholds: [-286.146]
+      coefficients: [0.129543, -0.019456]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 9, 10, 2]
+      thresholds: [-118.123]
+      coefficients: [0.194870, -0.009412]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 16, 16, 7]
+      thresholds: [3368.878]
+      coefficients: [-0.011814, 0.150292]
+- name: nose (right)
+  mean_position: {x: 33.897, y: 36.901}
+  basis_vectors:
+  - {x: -0.012, y: 0.264}
+  - {x: 0.144, y: -0.056}
+  - {x: 0.171, y: -0.050}
+  - {x: -0.212, y: -0.258}
+  - {x: -0.040, y: -0.088}
+  - {x: -0.052, y: 0.113}
+  - {x: -0.005, y: 0.063}
+  - {x: -0.134, y: 0.125}
+  - {x: 0.171, y: 0.055}
+  - {x: 0.097, y: -0.012}
+  - {x: 0.170, y: -0.008}
+  - {x: 0.027, y: -0.010}
+  - {x: -0.215, y: 0.064}
+  - {x: 0.030, y: -0.121}
+  - {x: -0.184, y: -0.163}
+  locator:
+    x:
+    - image_feature:
+        type: haar_diag
+        rect: [10, 7, 4, 8]
+      thresholds: [54.601]
+      coefficients: [-0.180907, 0.260011]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 12, 2, 2]
+      thresholds: [4.587]
+      coefficients: [0.089141, -0.318178]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 10, 4, 12]
+      thresholds: [-23.609]
+      coefficients: [0.178056, -0.128716]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 1, 8, 21]
+      thresholds: [-546.234]
+      coefficients: [0.184404, -0.092089]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 0, 6, 6]
+      thresholds: [-12.352]
+      coefficients: [-0.164260, 0.084868]
+    - image_feature:
+        type: haar_diag
+        rect: [8, 7, 6, 6]
+      thresholds: [120.263]
+      coefficients: [-0.031584, 0.268595]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 2, 1, 14]
+      thresholds: [111.162]
+      coefficients: [0.033969, -0.236923]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 8, 2, 12]
+      thresholds: [-8.273]
+      coefficients: [0.112111, -0.059808]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 7, 4, 2]
+      thresholds: [48.293]
+      coefficients: [0.022753, -0.231231]
+    - image_feature:
+        type: haar_diag
+        rect: [1, 9, 14, 8]
+      thresholds: [-338.141]
+      coefficients: [-0.119075, 0.038971]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 3, 24, 20]
+      thresholds: [-3491.157]
+      coefficients: [0.107551, -0.036760]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 0, 8, 9]
+      thresholds: [-325.675]
+      coefficients: [-0.125829, 0.029299]
+    - image_feature:
+        type: haar_diag
+        rect: [1, 0, 16, 24]
+      thresholds: [1398.262]
+      coefficients: [-0.016862, 0.171017]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 0, 18, 4]
+      thresholds: [15.772]
+      coefficients: [-0.058767, 0.046074]
+    - image_feature:
+        type: haar_vert2
+        rect: [20, 18, 2, 4]
+      thresholds: [25.714]
+      coefficients: [0.034119, -0.071195]
+    - image_feature:
+        type: haar_horiz2
+        rect: [2, 7, 20, 5]
+      thresholds: [-896.682]
+      coefficients: [0.134548, -0.016142]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 4, 4, 5]
+      thresholds: [-94.360]
+      coefficients: [-0.136656, 0.015078]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 5, 6, 5]
+      thresholds: [-529.822]
+      coefficients: [-0.245892, 0.007893]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 10, 10, 4]
+      thresholds: [-68.378]
+      coefficients: [0.014750, -0.115199]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 10, 8, 1]
+      thresholds: [-36.684]
+      coefficients: [-0.048134, 0.035902]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 2, 4, 8]
+      thresholds: [398.590]
+      coefficients: [-0.008421, 0.188696]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 0, 6, 18]
+      thresholds: [-339.482]
+      coefficients: [-0.115530, 0.012212]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 9, 6, 15]
+      thresholds: [240.300]
+      coefficients: [0.046059, -0.029963]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 2, 9, 20]
+      thresholds: [2409.259]
+      coefficients: [0.027271, -0.048218]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 0, 7, 6]
+      thresholds: [-180.570]
+      coefficients: [0.033811, -0.036155]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 6, 17, 6]
+      thresholds: [84.112]
+      coefficients: [-0.370277, 0.423753]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 11, 12, 1]
+      thresholds: [-31.713]
+      coefficients: [0.231516, -0.367892]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 8, 7, 2]
+      thresholds: [61.115]
+      coefficients: [-0.118896, 0.387607]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 14, 21, 4]
+      thresholds: [-199.875]
+      coefficients: [-0.387949, 0.100101]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 18, 18, 6]
+      thresholds: [-234.130]
+      coefficients: [0.284193, -0.100478]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 4, 13, 10]
+      thresholds: [-165.163]
+      coefficients: [-0.333921, 0.061771]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 6, 9, 4]
+      thresholds: [261.020]
+      coefficients: [-0.037786, 0.419364]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 1, 13, 6]
+      thresholds: [-289.844]
+      coefficients: [-0.082334, 0.152706]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 11, 6, 2]
+      thresholds: [33.801]
+      coefficients: [0.044721, -0.228102]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 16, 18]
+      thresholds: [5508.080]
+      coefficients: [0.016450, -0.514555]
+    - image_feature:
+        type: haar_vert2
+        rect: [16, 11, 2, 6]
+      thresholds: [58.495]
+      coefficients: [-0.044619, 0.144915]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 5, 8, 4]
+      thresholds: [278.793]
+      coefficients: [-0.010405, 0.538457]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 6, 6, 8]
+      thresholds: [-24.241]
+      coefficients: [-0.163733, 0.034021]
+    - image_feature:
+        type: haar_vert2
+        rect: [15, 14, 5, 10]
+      thresholds: [173.547]
+      coefficients: [0.128128, -0.037923]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 15, 16, 4]
+      thresholds: [-141.665]
+      coefficients: [-0.186991, 0.019551]
+    - image_feature:
+        type: haar_horiz2
+        rect: [17, 6, 4, 11]
+      thresholds: [-156.008]
+      coefficients: [0.096692, -0.030745]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 12, 8, 2]
+      thresholds: [98.803]
+      coefficients: [0.011093, -0.270669]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 6, 12, 8]
+      thresholds: [1195.956]
+      coefficients: [0.025716, -0.104917]
+    - image_feature:
+        type: haar_vert2
+        rect: [9, 7, 5, 2]
+      thresholds: [46.332]
+      coefficients: [-0.015749, 0.156335]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 22, 8, 2]
+      thresholds: [46.945]
+      coefficients: [0.026353, -0.079392]
+    - image_feature:
+        type: haar_horiz3
+        rect: [19, 0, 3, 1]
+      thresholds: [66.828]
+      coefficients: [-0.103125, 0.018777]
+    - image_feature:
+        type: haar_horiz2
+        rect: [17, 4, 6, 13]
+      thresholds: [-428.427]
+      coefficients: [0.107982, -0.017243]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 4, 14, 10]
+      thresholds: [-876.676]
+      coefficients: [-0.272513, 0.006935]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 16, 4, 6]
+      thresholds: [37.581]
+      coefficients: [0.062110, -0.028767]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 14, 12, 6]
+      thresholds: [-96.350]
+      coefficients: [0.048672, -0.029044]
+- name: mouth (top)
+  mean_position: {x: 30.116, y: 43.860}
+  basis_vectors:
+  - {x: -0.045, y: 0.338}
+  - {x: 0.084, y: 0.046}
+  - {x: 0.252, y: 0.003}
+  - {x: -0.145, y: -0.126}
+  - {x: -0.001, y: -0.211}
+  - {x: -0.056, y: -0.029}
+  - {x: 0.108, y: 0.136}
+  - {x: 0.076, y: -0.188}
+  - {x: 0.078, y: 0.114}
+  - {x: 0.062, y: -0.201}
+  - {x: 0.049, y: -0.477}
+  - {x: 0.097, y: 0.036}
+  - {x: 0.037, y: 0.058}
+  - {x: 0.034, y: -0.229}
+  - {x: 0.022, y: -0.032}
+  locator:
+    x:
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 2, 6, 17]
+      thresholds: [-126.701]
+      coefficients: [0.132954, -0.240825]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 1, 2, 13]
+      thresholds: [-34.665]
+      coefficients: [0.194816, -0.123232]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 16, 12, 6]
+      thresholds: [-323.292]
+      coefficients: [0.182962, -0.094233]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 6, 6, 16]
+      thresholds: [83.052]
+      coefficients: [0.171208, -0.090792]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 3, 2, 13]
+      thresholds: [-6.501]
+      coefficients: [0.120329, -0.111459]
+    - image_feature:
+        type: haar_diag
+        rect: [3, 3, 16, 18]
+      thresholds: [-901.130]
+      coefficients: [-0.257897, 0.045172]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 1, 8, 8]
+      thresholds: [359.817]
+      coefficients: [0.094344, -0.114603]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 3, 2, 2]
+      thresholds: [-23.665]
+      coefficients: [0.250093, -0.030518]
+    - image_feature:
+        type: haar_horiz2
+        rect: [17, 2, 6, 2]
+      thresholds: [33.806]
+      coefficients: [0.035528, -0.223630]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 5, 8, 18]
+      thresholds: [-247.966]
+      coefficients: [-0.105788, 0.059618]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 8, 1, 8]
+      thresholds: [80.797]
+      coefficients: [-0.032886, 0.150676]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 19, 6, 3]
+      thresholds: [70.685]
+      coefficients: [0.045759, -0.103741]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 18, 6, 3]
+      thresholds: [-57.625]
+      coefficients: [0.093353, -0.054641]
+    - image_feature:
+        type: haar_horiz2
+        rect: [15, 0, 6, 4]
+      thresholds: [-102.145]
+      coefficients: [0.095826, -0.040517]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 4, 2, 5]
+      thresholds: [-55.128]
+      coefficients: [0.415104, -0.008788]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 8, 10, 12]
+      thresholds: [-104.570]
+      coefficients: [0.200980, -0.016117]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 9, 18, 10]
+      thresholds: [-448.252]
+      coefficients: [-0.090318, 0.029695]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 2, 4, 12]
+      thresholds: [28.393]
+      coefficients: [-0.077382, 0.034165]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 3, 6, 19]
+      thresholds: [187.137]
+      coefficients: [0.015239, -0.157597]
+    - image_feature:
+        type: haar_horiz2
+        rect: [1, 2, 4, 8]
+      thresholds: [-240.668]
+      coefficients: [0.546628, -0.004152]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 6, 14, 10]
+      thresholds: [-542.492]
+      coefficients: [-0.132894, 0.015041]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 0, 18, 8]
+      thresholds: [291.847]
+      coefficients: [-0.039703, 0.048598]
+    - image_feature:
+        type: haar_diag
+        rect: [3, 0, 16, 12]
+      thresholds: [-559.622]
+      coefficients: [-0.079730, 0.022255]
+    - image_feature:
+        type: haar_diag
+        rect: [22, 3, 2, 14]
+      thresholds: [-9.158]
+      coefficients: [-0.071261, 0.022452]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 3, 4, 12]
+      thresholds: [-78.665]
+      coefficients: [0.072083, -0.020981]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 12, 21, 6]
+      thresholds: [197.604]
+      coefficients: [0.354166, -0.329413]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 11, 13, 2]
+      thresholds: [93.708]
+      coefficients: [-0.197243, 0.278589]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 10, 15, 2]
+      thresholds: [181.146]
+      coefficients: [-0.083698, 0.460405]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 4, 10, 2]
+      thresholds: [-15.996]
+      coefficients: [0.143388, -0.217642]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 12, 24, 8]
+      thresholds: [1248.809]
+      coefficients: [0.077809, -0.339001]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 5, 17, 16]
+      thresholds: [166.801]
+      coefficients: [0.428515, -0.050863]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 8, 14, 6]
+      thresholds: [-105.922]
+      coefficients: [-0.151913, 0.097523]
+    - image_feature:
+        type: haar_diag
+        rect: [15, 4, 6, 8]
+      thresholds: [214.658]
+      coefficients: [0.039240, -0.311898]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 11, 14, 4]
+      thresholds: [-241.703]
+      coefficients: [0.321315, -0.029955]
+    - image_feature:
+        type: haar_vert2
+        rect: [22, 9, 1, 8]
+      thresholds: [58.614]
+      coefficients: [0.064330, -0.132410]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 2]
+      thresholds: [-90.692]
+      coefficients: [0.531882, -0.014948]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 13, 8, 1]
+      thresholds: [-43.318]
+      coefficients: [0.080971, -0.071762]
+    - image_feature:
+        type: haar_horiz2
+        rect: [17, 6, 4, 2]
+      thresholds: [42.976]
+      coefficients: [0.016323, -0.307099]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 12, 6, 3]
+      thresholds: [-181.787]
+      coefficients: [0.245726, -0.019167]
+    - image_feature:
+        type: haar_vert3
+        rect: [9, 5, 15, 6]
+      thresholds: [4446.451]
+      coefficients: [0.037567, -0.117877]
+    - image_feature:
+        type: haar_diag
+        rect: [16, 3, 8, 10]
+      thresholds: [346.194]
+      coefficients: [0.018215, -0.221060]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 2, 19, 20]
+      thresholds: [982.236]
+      coefficients: [0.224546, -0.017323]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 6, 4, 18]
+      thresholds: [25.778]
+      coefficients: [0.063562, -0.049878]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 15, 6, 4]
+      thresholds: [99.628]
+      coefficients: [0.023409, -0.150024]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 5, 2]
+      thresholds: [101.682]
+      coefficients: [-0.012693, 0.241433]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 3, 21, 16]
+      thresholds: [11299.556]
+      coefficients: [0.004314, -0.758683]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 11, 12, 2]
+      thresholds: [652.124]
+      coefficients: [-0.002174, 1.295673]
+    - image_feature:
+        type: haar_vert2
+        rect: [0, 0, 14, 6]
+      thresholds: [-55.296]
+      coefficients: [-0.081534, 0.032320]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 4, 14, 17]
+      thresholds: [-1314.012]
+      coefficients: [-0.222681, 0.010806]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 19, 4, 1]
+      thresholds: [8.145]
+      coefficients: [0.050595, -0.047772]
+- name: mouth (bottom)
+  mean_position: {x: 30.136, y: 52.119}
+  basis_vectors:
+  - {x: -0.061, y: 0.368}
+  - {x: 0.083, y: 0.139}
+  - {x: 0.311, y: 0.017}
+  - {x: -0.115, y: 0.058}
+  - {x: -0.056, y: -0.060}
+  - {x: -0.028, y: -0.276}
+  - {x: 0.067, y: -0.028}
+  - {x: 0.074, y: 0.148}
+  - {x: 0.004, y: -0.166}
+  - {x: 0.024, y: 0.103}
+  - {x: 0.004, y: 0.555}
+  - {x: 0.120, y: -0.282}
+  - {x: 0.118, y: 0.308}
+  - {x: 0.086, y: -0.320}
+  - {x: 0.103, y: 0.211}
+  locator:
+    x:
+    - image_feature:
+        type: haar_diag
+        rect: [7, 10, 10, 14]
+      thresholds: [54.118]
+      coefficients: [0.154976, -0.245919]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 3, 24, 18]
+      thresholds: [-87.204]
+      coefficients: [0.187259, -0.137513]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 11, 16, 3]
+      thresholds: [-162.349]
+      coefficients: [0.213749, -0.093801]
+    - image_feature:
+        type: haar_diag
+        rect: [10, 11, 8, 8]
+      thresholds: [-86.414]
+      coefficients: [0.107462, -0.123891]
+    - image_feature:
+        type: haar_horiz2
+        rect: [9, 12, 6, 6]
+      thresholds: [79.171]
+      coefficients: [0.060026, -0.192961]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 1, 10, 14]
+      thresholds: [-310.805]
+      coefficients: [-0.190011, 0.043356]
+    - image_feature:
+        type: haar_vert2
+        rect: [4, 0, 1, 20]
+      thresholds: [33.693]
+      coefficients: [0.060855, -0.126237]
+    - image_feature:
+        type: haar_diag
+        rect: [5, 11, 12, 6]
+      thresholds: [85.431]
+      coefficients: [0.075227, -0.083225]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 3, 20, 12]
+      thresholds: [-634.235]
+      coefficients: [0.181731, -0.030317]
+    - image_feature:
+        type: haar_horiz2
+        rect: [4, 0, 8, 14]
+      thresholds: [-76.896]
+      coefficients: [0.128487, -0.037966]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 1, 6, 12]
+      thresholds: [55.116]
+      coefficients: [0.033011, -0.160527]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 13, 4, 2]
+      thresholds: [-45.869]
+      coefficients: [0.210986, -0.018426]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 16, 20, 4]
+      thresholds: [207.494]
+      coefficients: [-0.018200, 0.205772]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 0, 4, 20]
+      thresholds: [8.082]
+      coefficients: [0.045067, -0.067337]
+    - image_feature:
+        type: haar_horiz2
+        rect: [14, 11, 8, 3]
+      thresholds: [-138.106]
+      coefficients: [-0.057537, 0.052667]
+    - image_feature:
+        type: haar_horiz2
+        rect: [13, 0, 6, 10]
+      thresholds: [-103.667]
+      coefficients: [0.056977, -0.041242]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 0, 2, 6]
+      thresholds: [-48.515]
+      coefficients: [-0.130854, 0.016546]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 3, 16, 16]
+      thresholds: [551.130]
+      coefficients: [0.025889, -0.082361]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 7, 8, 4]
+      thresholds: [-197.517]
+      coefficients: [-0.129690, 0.015304]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 10, 14, 6]
+      thresholds: [-607.681]
+      coefficients: [0.243617, -0.007847]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 11, 6, 12]
+      thresholds: [199.708]
+      coefficients: [-0.007988, 0.221773]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 14, 16, 8]
+      thresholds: [-442.362]
+      coefficients: [-0.130820, 0.012649]
+    - image_feature:
+        type: haar_vert2
+        rect: [22, 3, 1, 18]
+      thresholds: [109.303]
+      coefficients: [-0.025221, 0.058353]
+    - image_feature:
+        type: haar_diag
+        rect: [3, 4, 16, 10]
+      thresholds: [691.299]
+      coefficients: [0.007519, -0.179472]
+    - image_feature:
+        type: haar_vert2
+        rect: [22, 6, 2, 6]
+      thresholds: [-39.533]
+      coefficients: [-0.055974, 0.021621]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 1, 19, 14]
+      thresholds: [551.162]
+      coefficients: [0.305908, -0.442035]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 12, 8, 10]
+      thresholds: [-175.760]
+      coefficients: [-0.374405, 0.186058]
+    - image_feature:
+        type: haar_diag
+        rect: [5, 7, 10, 10]
+      thresholds: [-69.789]
+      coefficients: [-0.221706, 0.198577]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 4, 20, 6]
+      thresholds: [-262.631]
+      coefficients: [0.232444, -0.118814]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 7, 10, 12]
+      thresholds: [591.631]
+      coefficients: [0.045387, -0.434757]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 10, 7, 10]
+      thresholds: [-248.983]
+      coefficients: [-0.117112, 0.138492]
+    - image_feature:
+        type: haar_vert2
+        rect: [14, 4, 9, 10]
+      thresholds: [637.520]
+      coefficients: [0.032985, -0.355542]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 8, 6, 8]
+      thresholds: [-24.928]
+      coefficients: [0.147187, -0.067887]
+    - image_feature:
+        type: haar_diag
+        rect: [11, 9, 10, 10]
+      thresholds: [448.212]
+      coefficients: [0.021033, -0.344530]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 15, 3, 4]
+      thresholds: [115.820]
+      coefficients: [-0.020547, 0.281008]
+    - image_feature:
+        type: haar_horiz3
+        rect: [4, 9, 15, 4]
+      thresholds: [1417.551]
+      coefficients: [-0.206829, 0.024385]
+    - image_feature:
+        type: haar_vert2
+        rect: [2, 9, 19, 10]
+      thresholds: [-218.237]
+      coefficients: [-0.038179, 0.119601]
+    - image_feature:
+        type: haar_vert2
+        rect: [16, 7, 6, 6]
+      thresholds: [295.834]
+      coefficients: [0.011303, -0.362175]
+    - image_feature:
+        type: haar_vert3
+        rect: [6, 11, 5, 12]
+      thresholds: [1775.724]
+      coefficients: [-0.070470, 0.055394]
+    - image_feature:
+        type: haar_vert2
+        rect: [11, 3, 13, 4]
+      thresholds: [-118.651]
+      coefficients: [0.172383, -0.021477]
+    - image_feature:
+        type: haar_diag
+        rect: [12, 4, 6, 20]
+      thresholds: [206.431]
+      coefficients: [0.027438, -0.134011]
+    - image_feature:
+        type: haar_diag
+        rect: [13, 7, 8, 16]
+      thresholds: [-621.366]
+      coefficients: [-0.117626, 0.028965]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 10, 4, 14]
+      thresholds: [50.778]
+      coefficients: [-0.014029, 0.204524]
+    - image_feature:
+        type: haar_horiz3
+        rect: [7, 3, 9, 11]
+      thresholds: [5879.994]
+      coefficients: [-0.011917, 0.240418]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 10, 19, 14]
+      thresholds: [-802.762]
+      coefficients: [-0.121114, 0.023665]
+    - image_feature:
+        type: haar_horiz2
+        rect: [8, 4, 6, 11]
+      thresholds: [-118.064]
+      coefficients: [-0.091063, 0.026648]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 7, 20, 6]
+      thresholds: [1607.397]
+      coefficients: [0.005306, -0.390589]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 0, 12, 4]
+      thresholds: [161.575]
+      coefficients: [-0.025660, 0.080747]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 10, 3, 6]
+      thresholds: [-144.940]
+      coefficients: [-0.059102, 0.033079]
+    - image_feature:
+        type: haar_vert3
+        rect: [2, 9, 5, 15]
+      thresholds: [1516.465]
+      coefficients: [-0.112543, 0.015882]
+- name: chin
+  mean_position: {x: 29.959, y: 63.033}
+  basis_vectors:
+  - {x: -0.077, y: 0.378}
+  - {x: 0.064, y: 0.248}
+  - {x: 0.384, y: 0.105}
+  - {x: -0.072, y: 0.280}
+  - {x: -0.132, y: 0.026}
+  - {x: 0.017, y: -0.133}
+  - {x: 0.035, y: -0.381}
+  - {x: 0.071, y: -0.259}
+  - {x: -0.095, y: 0.086}
+  - {x: -0.060, y: 0.207}
+  - {x: -0.025, y: 0.129}
+  - {x: 0.142, y: 0.148}
+  - {x: 0.286, y: -0.121}
+  - {x: 0.099, y: 0.289}
+  - {x: 0.170, y: -0.249}
+  locator:
+    x:
+    - image_feature:
+        type: haar_diag
+        rect: [8, 0, 8, 12]
+      thresholds: [34.627]
+      coefficients: [0.172496, -0.219068]
+    - image_feature:
+        type: haar_diag
+        rect: [7, 0, 14, 10]
+      thresholds: [-259.116]
+      coefficients: [0.136450, -0.144797]
+    - image_feature:
+        type: haar_diag
+        rect: [13, 6, 4, 8]
+      thresholds: [24.697]
+      coefficients: [-0.079738, 0.151112]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 1, 14, 2]
+      thresholds: [78.851]
+      coefficients: [0.073449, -0.133327]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 6, 12, 10]
+      thresholds: [-297.537]
+      coefficients: [-0.112767, 0.065707]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 0, 4, 7]
+      thresholds: [-52.252]
+      coefficients: [-0.115146, 0.059135]
+    - image_feature:
+        type: haar_horiz2
+        rect: [5, 1, 14, 2]
+      thresholds: [-168.251]
+      coefficients: [0.286678, -0.020928]
+    - image_feature:
+        type: haar_vert2
+        rect: [17, 9, 5, 4]
+      thresholds: [124.417]
+      coefficients: [0.037465, -0.125887]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 2, 4, 5]
+      thresholds: [-28.449]
+      coefficients: [0.103498, -0.034845]
+    - image_feature:
+        type: haar_diag
+        rect: [4, 8, 12, 4]
+      thresholds: [-86.596]
+      coefficients: [-0.088800, 0.033621]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 0, 14, 14]
+      thresholds: [408.480]
+      coefficients: [-0.015344, 0.198552]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 0, 8, 22]
+      thresholds: [279.309]
+      coefficients: [-0.025955, 0.110534]
+    - image_feature:
+        type: haar_horiz2
+        rect: [10, 2, 4, 11]
+      thresholds: [21.906]
+      coefficients: [0.040408, -0.065145]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 7, 16, 1]
+      thresholds: [-162.257]
+      coefficients: [-0.229014, 0.011140]
+    - image_feature:
+        type: haar_vert2
+        rect: [18, 1, 5, 8]
+      thresholds: [-5.527]
+      coefficients: [-0.064608, 0.032666]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 7, 20, 14]
+      thresholds: [-1013.589]
+      coefficients: [-0.115361, 0.015731]
+    - image_feature:
+        type: haar_horiz2
+        rect: [0, 13, 2, 8]
+      thresholds: [-65.086]
+      coefficients: [-0.102877, 0.016298]
+    - image_feature:
+        type: haar_horiz2
+        rect: [20, 5, 4, 19]
+      thresholds: [794.160]
+      coefficients: [-0.007946, 0.222710]
+    - image_feature:
+        type: haar_horiz2
+        rect: [3, 6, 10, 16]
+      thresholds: [3351.236]
+      coefficients: [-0.006925, 0.219560]
+    - image_feature:
+        type: haar_horiz2
+        rect: [11, 3, 2, 13]
+      thresholds: [37.141]
+      coefficients: [0.015649, -0.093517]
+    - image_feature:
+        type: haar_horiz2
+        rect: [7, 2, 4, 10]
+      thresholds: [-62.779]
+      coefficients: [-0.087723, 0.016826]
+    - image_feature:
+        type: haar_horiz2
+        rect: [12, 5, 4, 6]
+      thresholds: [15.144]
+      coefficients: [-0.027633, 0.057384]
+    - image_feature:
+        type: haar_diag
+        rect: [1, 4, 18, 10]
+      thresholds: [514.623]
+      coefficients: [0.010281, -0.132842]
+    - image_feature:
+        type: haar_diag
+        rect: [9, 0, 2, 24]
+      thresholds: [-30.833]
+      coefficients: [-0.082042, 0.014806]
+    - image_feature:
+        type: haar_horiz2
+        rect: [6, 16, 18, 1]
+      thresholds: [-297.508]
+      coefficients: [0.182115, -0.006498]
+    y:
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 12, 6]
+      thresholds: [109.621]
+      coefficients: [0.379852, -0.365864]
+    - image_feature:
+        type: haar_diag
+        rect: [6, 5, 18, 6]
+      thresholds: [99.151]
+      coefficients: [-0.175967, 0.444146]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 2, 8, 10]
+      thresholds: [-106.847]
+      coefficients: [-0.322989, 0.163909]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 12, 8, 2]
+      thresholds: [40.355]
+      coefficients: [0.093144, -0.294414]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 4, 3, 6]
+      thresholds: [100.719]
+      coefficients: [-0.087773, 0.242082]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 9, 17, 2]
+      thresholds: [-85.699]
+      coefficients: [0.555343, -0.021409]
+    - image_feature:
+        type: haar_horiz2
+        rect: [16, 0, 8, 22]
+      thresholds: [-349.074]
+      coefficients: [-0.123087, 0.085671]
+    - image_feature:
+        type: haar_diag
+        rect: [14, 4, 4, 10]
+      thresholds: [-59.944]
+      coefficients: [-0.214016, 0.044178]
+    - image_feature:
+        type: haar_vert2
+        rect: [10, 11, 3, 2]
+      thresholds: [-2.105]
+      coefficients: [0.132447, -0.055787]
+    - image_feature:
+        type: haar_vert2
+        rect: [12, 2, 3, 14]
+      thresholds: [-40.099]
+      coefficients: [-0.179052, 0.038871]
+    - image_feature:
+        type: haar_diag
+        rect: [2, 11, 16, 6]
+      thresholds: [-237.503]
+      coefficients: [-0.168225, 0.030425]
+    - image_feature:
+        type: haar_vert2
+        rect: [8, 9, 5, 2]
+      thresholds: [-49.755]
+      coefficients: [0.425679, -0.009947]
+    - image_feature:
+        type: haar_diag
+        rect: [0, 0, 18, 2]
+      thresholds: [-107.352]
+      coefficients: [-0.175808, 0.022042]
+    - image_feature:
+        type: haar_vert3
+        rect: [10, 0, 4, 9]
+      thresholds: [1137.904]
+      coefficients: [-0.066615, 0.051172]
+    - image_feature:
+        type: haar_vert2
+        rect: [17, 12, 3, 2]
+      thresholds: [13.148]
+      coefficients: [0.025250, -0.126508]
+    - image_feature:
+        type: haar_vert2
+        rect: [5, 10, 15, 2]
+      thresholds: [-71.013]
+      coefficients: [0.150271, -0.019101]
+    - image_feature:
+        type: haar_horiz2
+        rect: [18, 8, 6, 6]
+      thresholds: [-179.290]
+      coefficients: [-0.091193, 0.032901]
+    - image_feature:
+        type: haar_vert3
+        rect: [0, 0, 7, 3]
+      thresholds: [1275.172]
+      coefficients: [-0.021575, 0.120819]
+    - image_feature:
+        type: haar_vert3
+        rect: [8, 6, 6, 18]
+      thresholds: [1028.632]
+      coefficients: [0.283117, -0.009119]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 1, 16, 14]
+      thresholds: [-819.429]
+      coefficients: [-0.146053, 0.017984]
+    - image_feature:
+        type: haar_vert2
+        rect: [6, 8, 7, 2]
+      thresholds: [-126.640]
+      coefficients: [0.895913, -0.002729]
+    - image_feature:
+        type: haar_vert2
+        rect: [3, 0, 4, 2]
+      thresholds: [-32.183]
+      coefficients: [-0.103941, 0.019032]
+    - image_feature:
+        type: haar_horiz3
+        rect: [3, 8, 6, 13]
+      thresholds: [1763.504]
+      coefficients: [-0.109959, 0.017807]
+    - image_feature:
+        type: haar_vert2
+        rect: [1, 9, 2, 2]
+      thresholds: [-15.152]
+      coefficients: [-0.090847, 0.020841]
+    - image_feature:
+        type: haar_vert2
+        rect: [7, 1, 13, 8]
+      thresholds: [-31.780]
+      coefficients: [-0.031789, 0.064587]
