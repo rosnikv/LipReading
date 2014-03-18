@@ -20,6 +20,7 @@ def normalize(X, low, high, dtype=None):
 
 
 def read_images(path, sz=None):
+#sz Array of integers specifying the array shape.
     c = 0
     X,y = [], []
     for dirname, dirnames, filenames in os.walk(path):
@@ -53,10 +54,6 @@ if __name__ == "__main__":
         sys.exit()
     # Now read in the image data. This must be a valid path!
     [X,y] = read_images(sys.argv[1])
-    # Convert labels to 32bit integers. This is a workaround for 64bit machines,
-    # because the labels will truncated else. This will be fixed in code as
-    # soon as possible, so Python users don't need to know about this.
-    # Thanks to Leo Dirac for reporting:
     y = np.asarray(y, dtype=np.int32)
     # If a out_dir is given, set it:
     if len(sys.argv) == 3:
@@ -70,16 +67,49 @@ if __name__ == "__main__":
     # so we use np.asarray to turn them into NumPy lists to make
     # the OpenCV wrapper happy:
     model.train(np.asarray(X), np.asarray(y))
-   
-    mean = model.getMat("mean")
+    # We now get a prediction from the model! In reality you
+    # should always use unseen images for testing your model.
+    # But so many people were confused, when I sliced an image
+    # off in the C++ version, so I am just using an image we
+    # have trained with.
+    #
+    # model.predict is going to return the predicted label and
+    # the associated confidence:
+    #[p_label, p_confidence] = model.predict(np.asarray(X[0]))
+    # Print it:
+    #print "Predicted label = %d (confidence=%.2f)" % (p_label, p_confidence)
+    # Cool! Finally we'll plot the Eigenfaces, because that's
+    # what most people read in the papers are keen to see.
+    #
+    # Just like in C++ you have access to all model internal
+    # data, because the cv::FaceRecognizer is a cv::Algorithm.
+    #
+    # You can see the available parameters with getParams():
+    #print model.getParams()
+    # Now let's get some data:
+    mean = model.getMat("mean") #full copy of array
     eigenvectors = model.getMat("eigenvectors")
     # We'll save the mean, by first normalizing it:
     mean_norm = normalize(mean, 0, 255, dtype=np.uint8)
     mean_resized = mean_norm.reshape(X[0].shape)
+#reshape Changes the shape and/or the number of channels of a 2D matrix without copying the data.
+#shape  shape attribute for numpy arrays returns the dimensions of the array.
     if out_dir is None:
         cv2.imshow("mean", mean_resized)
     else:
         cv2.imwrite("%s/mean.png" % (out_dir), mean_resized)
-
+    # Turn the first (at most) 16 eigenvectors into grayscale
+    # images. You could also use cv::normalize here, but sticking
+    # to NumPy is much easier for now.
+    # Note: eigenvectors are stored by column:
+    for i in xrange(min(len(X), 16)):
+        eigenvector_i = eigenvectors[:,i].reshape(X[0].shape)
+        eigenvector_i_norm = normalize(eigenvector_i, 0, 255, dtype=np.uint8)
+        # Show or save the images:
+        if out_dir is None:
+            cv2.imshow("%s/eigenface_%d" % (out_dir,i), eigenvector_i_norm)
+        else:
+            cv2.imwrite("%s/eigenface_%d.png" % (out_dir,i), eigenvector_i_norm)
+    # Show the images:
     if out_dir is None:
         cv2.waitKey(0)
