@@ -1,0 +1,13 @@
+aam_type: basic_aam
+am_name: lip
+model_dir: ./
+aam_name: mylip
+displacement_x: 2
+displacement_y: 2
+scaledisplacement_x: 0.1
+scaledisplacement_y: 0.1
+tex_displacement: 0.1
+displacement_params: 0.5
+n_per_eg: 3
+max_n_samples: 10
+

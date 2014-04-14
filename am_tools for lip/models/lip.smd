@@ -1,0 +1,76 @@
+// List of all annotated face images
+model_name: lip
+model_dir: ./
+parts_file: lip
+image_dir: ../main/images/
+points_dir: ../main/points/
+
+// Define the base name of the triangles file
+// The file face_front.tri will be loaded from the model directory
+tri_file: face_front
+
+// shape_aligner can be None, align_cog_2d, align_similar_2d, align_affine_2d,...
+shape_aligner: align_similar_2d
+
+// Define how to choose the number of modes to retain for the
+// shape, texture and combined appearance models
+// The number will be chosen to explain proportion of the variance,
+// constrained by min and max
+shape_modes:  { min: 0 max: 999 prop: 0.90 }
+tex_modes:  { min: 0 max: 999 prop: 0.90 }
+combined_modes:  { min: 0 max: 999 prop: 0.999 }
+
+// Define how the vector models will be limited to plausible values
+// Valid limiters are mdpm_box_limits or mdpm_prob_limits.
+// The default is mdpm_box_limits with sd_limit set to 3.0
+// However the example given here is believed to be much better.
+params_limiter: mdpm_prob_limits
+{
+  acceptance_prob: 0.99
+}
+
+// Number of pixels to represent with highest resolution texture model
+n_pixels: 5000
+
+// Define whether to treat images as colour (RGB) or a greyscale (Grey)
+// Also defines whether the model is to be colour or greyscale
+colour: Grey // Alternatives: Grey,RGB,...
+
+// Texture Sampler can be vapm_triangle_sampler<vxl_byte>, vapm_tri_grad_sampler<float>, vapm_profile_set_sampler, etc.
+tex_sampler: vapm_profile_set_sampler
+{
+  profile_sampler: vsml_profile_sampler_2d<vxl_byte>
+  prof_hi: 2
+  prof_lo: -2
+  width: 1
+  step_size: 1.0
+  use_gradient: 0
+}
+
+// Define the normalisation to be applied when building and using the texture model.
+// tex_aligner can be None, align_linear_1d, ...
+tex_aligner: align_linear_1d
+
+// shape_wts define how to compute relative scaling of shape & tex.
+// shape_wts can be `EqualVar', `EqualEffect',...
+shape_wts: EqualVar
+// Image Pyramid Builder can be gauss_byte, gauss_float, grad_float ...
+pyr_builder: gauss_byte
+
+// Define the maximum number of image pyramid levels to build
+max_im_pyr_levels: 5
+
+// Define the model resolution levels to build
+// Level 0 contains  pixels
+// Level 1 is half the size in each dimension
+// Level 2 is half again etc
+min_level: 0
+max_level: 2
+
+
+// Details of points : images
+training_set:
+{
+ 1.pts : 1.jpg
+
+}

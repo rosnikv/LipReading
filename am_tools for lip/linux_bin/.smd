@@ -1,0 +1,63 @@
+// Shape Model Data
+model_name: 
+model_dir: 
+image_dir: 
+points_dir: 
+// Alternatives: radial,wolfson,sunras,bmp 
+// shape_aligner can be None, AlignCoG2D, AlignEuclid2D, ...
+shape_aligner: AlignEuclid2D
+shape_variant_maker: -
+shape_modes:  { min: 0 max: 999 prop: 0.95 } 
+tex_modes:  { min: 0 max: 999 prop: 0.95 } 
+combined_modes:  { min: 0 max: 999 prop: 0.95 } 
+params_limiter: mdpm_box_limits
+{
+  sd_limits: 3
+}
+tex_params_limiter: mdpm_box_limits
+{
+  sd_limits: 3
+}
+shape_params_limiter: mdpm_box_limits
+{
+  sd_limits: 3
+}
+tex_params_pdf: axis_gaussian_builder
+shape_params_pdf: axis_gaussian_builder
+app_params_pdf: axis_gaussian_builder
+n_pixels: 3000
+colour: Grey // Alternatives: Grey,RGB,...
+// Texture Sampler can be tri_raw, tri_edge...
+tex_sampler: vapm_triangle_sampler<vxl_byte>
+// tex_aligner can be None, AlignLinear1D, ...
+tex_aligner: AlignLinear1D
+// shape_wts define how to compute relative scaling of shape & tex.
+// shape_wts can be `EqualVar', `EqualEffect',...
+shape_wts: EqualVar
+// point_finder defines point finder used for ASM search
+point_finder: local_models
+// tex_model defines type of model to represent texture statistics, eg: pca, pca+haar1d
+tex_model: pca
+// Image Pyramid Builder can be gauss_byte, gauss_float, grad_float ...
+pyr_builder: GaussByte
+points_pyr_builder: Same
+max_im_pyr_levels: 5
+
+// Levels of multi-res model to build :
+min_level: 0
+max_level: 4
+
+// For ASM profile models : 
+g_in_len: 3
+g_out_len: 3
+g_width: 1
+sample_int: 1
+use_grad: 1
+norm_grey: 1
+restrict_points_to_parts: 0
+
+default_image_pixel_size: 1
+// Details of points : images
+training_set:
+{
+}

@@ -1,0 +1,6 @@
+This folder contains the training data set that we have used.
+As a newbie we have experimented with four words. 
+No (no1,no2,no3 are the various training dataset for NO)
+Yes (similarly yes1..yes5)
+Thankyou (ty1,..ty5)
+Please (pl1,..pl5)
