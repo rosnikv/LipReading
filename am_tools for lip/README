@@ -1,0 +1,15 @@
+Tools and Data for Appearance Modelling
+
+Directory structure:
+
+- linux_bin   (Tools for linux)
+- win_bin     (Tools for windows)
+- images      (Set of example images)
+- points      (Set of example points files)
+- models      (Set of example model parameter files)
+- doc         (HTML documentation)
+
+[You will either have linux_bin or win_bin]
+
+Arrange that linux_bin or win_bin is in your path, or copy the tools to a suitable
+directory.
