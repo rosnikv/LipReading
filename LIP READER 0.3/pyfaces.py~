@@ -47,8 +47,7 @@ class PyFaces(object):
 
 
 def pronounce(match):							#ADD VOICE	
-    op="No"
-    out="None"
+    op,out="None"
     if(match=='pl1.png'or match=='pl2.png'or match=='pl3.png'):
 	op='please'
 	out='PLEASE'

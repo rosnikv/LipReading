@@ -1,3 +1,3 @@
 #!/bin/bash
-python mean.py  /media/deepthi/01CE146C58D7E350/home/faces-master/pyfaces/PyFaces/testdata/word /media/deepthi/01CE146C58D7E350/home/faces-master/pyfaces/PyFaces/out/ ;
-python pyfaces.py -i /media/deepthi/01CE146C58D7E350/home/faces-master/pyfaces/PyFaces/out/mean.png -d /media/deepthi/01CE146C58D7E350/home/faces-master/pyfaces/PyFaces/eigenmean;
+python mean.py  testdata/word out/ ;
+#python pyfaces.py -i out/mean.png -d eigenmean;

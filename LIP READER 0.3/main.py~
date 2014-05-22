@@ -27,6 +27,7 @@ script_dir = os.path.dirname(os.path.abspath('gui'))
 g=0
 h=0
 m=1
+ 
 
 def DetectFace(image, faceCascade, returnImage=False):
     # This function takes a grey scale cv image and finds
@@ -85,13 +86,11 @@ def imgCrop(image, cropBox, boxScale=1):
     PIL_box=[cropBox[0]-xDelta, cropBox[1]-yDelta, cropBox[0]+cropBox[2]+xDelta, cropBox[1]+cropBox[3]+yDelta]
 
     return image.crop(PIL_box)
+
+
+
 def faceCrop(imagePattern,boxScale=1):
-    # Select one of the haarcascade files:
-    #   haarcascade_frontalface_alt.xml  <-- Best one?
-    #   haarcascade_frontalface_alt2.xml
-    #   haarcascade_frontalface_alt_tree.xml
-    #   haarcascade_frontalface_default.xml
-    #   haarcascade_profileface.xml
+    
     faceCascade = cv.Load('haarcascade_frontalface_alt.xml')
     imgList=glob.glob(imagePattern)
     if len(imgList)<=0:
@@ -106,28 +105,21 @@ def faceCrop(imagePattern,boxScale=1):
             m=1
             for face in faces:
                 croppedImage=imgCrop(pil_im, face[0],boxScale=boxScale)
-                croppedImage.save("face"+str(g)+".jpg")
+                croppedImage.save("testdata/face"+str(g)+".jpg")
 	        print 1
-                mouthcrop = mouthCrop("face"+str(g)+".jpg",boxScale=1)
+                mouthcrop = mouthCrop("testdata/face"+str(g)+".jpg",boxScale=1)
 		print 2
                 g=g+1
 		  
 		if m==1:
 			
 			break
-                
-                
-                
+                                                
         else:
             print 'No faces found:', img
 
 def mouthCrop(imagePattern,boxScale=1):
-    # Select one of the haarcascade files:
-    #   haarcascade_frontalface_alt.xml  <-- Best one?
-    #   haarcascade_frontalface_alt2.xml
-    #   haarcascade_frontalface_alt_tree.xml
-    #   haarcascade_frontalface_default.xml
-    #   haarcascade_profileface.xml
+
     mouthCascade = cv.Load('mouth.xml')
     imgList=glob.glob(imagePattern)
     if len(imgList)<=0:
@@ -141,26 +133,26 @@ def mouthCrop(imagePattern,boxScale=1):
         n=1
         size=88,53
         if lips:
-            #n=1
+            
             for lip in lips:
                 croppedImage=imgCrop(pil_im, lip[0],boxScale=boxScale)
                 croppedImage=croppedImage.resize(size)
                 croppedImage.save("testdata/word/""mouth"+str(h)+".jpg")
                 h=h+1
-	    #os.system("""mogrify -resize 73x50^ \ -gravity center -extent 73x50 /home/hduser/MAIN\ PROJECT/CODE/main/testdata/word/* """)
-	       
-	    break
-             
-                
-                
+	   
+	        if(n==1):      
+         	  break
+		                             
         else:
             print 'No lips found:', img
 
 
 # Goto GUI Class
 class Prototype(Frame):
+    
     def __init__(self, parent):
-        gobject.threads_init()
+        
+	gobject.threads_init()
         Frame.__init__(self, parent)    
 	
         # Parent Object
@@ -186,13 +178,12 @@ class Prototype(Frame):
         self.gotoButton = Button(self.ButtonBox, text="Start", command=self.start_stop)
         self.gotoButton.pack(side=LEFT, padx=5, pady=5)
 
-	#self.capture = 
-	#self.capture = Label(self, text = "Shoot a Video").grid(row = 0, column = 2, sticky = W+E+N+S) 
-	
-        # Set up the gstreamer pipeline
-        #self.player = gst.parse_launch ("v4l2src ! video/x-raw-yuv,width=640,height=480 ! ffmpegcolorspace ! xvimagesink  ")
+	self.textBox=Label(text="** Speak")
+	self.textBox.pack(side=BOTTOM,padx=10,pady=15)
 
-	self.player = gst.parse_launch ("v4l2src ! tee name=t ! queue ! xvimagesink t. ! queue ! videorate ! video/x-raw-yuv, width=640, height=480, framerate=2/1 ! jpegenc ! multifilesink location=%05d.jpg  ")
+	
+	self.player = gst.parse_launch ("v4l2src ! tee name=t ! queue ! xvimagesink t. ! queue ! videorate ! video/x-raw-yuv, width=640, height=480, framerate=2/1 ! jpegenc ! multifilesink location=testdata/%05d.jpg  ")
+	
 	print "started"
 	bus = self.player.get_bus()
         bus.add_signal_watch()
@@ -204,37 +195,30 @@ class Prototype(Frame):
 	i=0
 	while True:	 
 	     try:
-	        
-	   	print "entered while"
+
 		print i
 		print "wait"
-	        #time.sleep(20)
-	        print "wait over"
 		
-		#self.player.set_state(gst.STATE_PLAYING)
-		#f, img = camera.read()
-		#im = numpy.array(img)
-		#cv2.imwrite('{0:05d}.jpg'.format(i),im)
-		#time.sleep(4)
-		print "going to open"
-		
-		pil_im=Image.open('{0:05d}.jpg'.format(i))
+		pil_im=Image.open('testdata/{0:05d}.jpg'.format(i))
 
-		#print "opened"
-		pil_im.save('res'+str(i)+'.jpg')
-		print "res saved"
-		facecrop = faceCrop('res'+str(i)+'.jpg',boxScale=1)
-		print "face croped"
-		#facecrop = faceCrop(str(i)+'.jpg',boxScale=1)
-		print i
-		i += 1
+		pil_im.save('testdata/res'+str(i)+'.jpg')
+		print "frame saved"
 		
-		print "wait over"
+		facecrop = mouthCrop('testdata/res'+str(i)+'.jpg',boxScale=1)
+		print "mouth croped"
+		i += 1
 		
              except IOError:
 		    break
         print "loop excited"
-    	os.system("""sh run.sh """)	
+    	os.system("""sh run.sh """)
+
+	f=open('output.txt','r')
+        word=f.read()
+
+	self.textBox['text']=word
+
+	f.close()
 		    
     def start_stop(self):
 	
@@ -243,20 +227,14 @@ class Prototype(Frame):
            self.gotoButton["text"] = "Stop"
 	   self.player.set_state(gst.STATE_PLAYING)
 	   print "started playing"
-	   #func2()
-	   #Process(target=func1).start()
-	   #time.sleep(10)
-           #Process(target=func2).start()
-	   #camera.open(0)
-	   #cv2.imshow("webcam", im)
+	
 	
         else:
-# Release everything if job is finished
+	# Release everything if job is finished
            
 	   self.gotoButton["text"] = "Start"
 	   self.player.set_state(gst.STATE_NULL)
-	   #camera.release()
-           #out.release()
+	   self.textBox['text']='** Process '
 
 
     def on_message(self, bus, message):
@@ -282,50 +260,20 @@ class Prototype(Frame):
 	    imagesink.set_xwindow_id(self.movie_window.winfo_id())
 
 
-#def func1():
-#	gst.STATE_PLAYING
 
-#def func2():
-	#time.sleep(10)
-	#i=0
-	#while True:
-	#	pil_im=Image.open('{0:05d}.jpg'.format(i))
-	#	pil_im.save('res'+str(i)+'.jpg')
-		#Image.open('{0:05d}.jpg'.format(i)).convert('RGB').save('res'+str(i)+'.jpg')
-	#	facecrop = faceCrop('res'+str(i)+'.jpg',boxScale=1)
-	#	i += 1
-	#	time.sleep(10)
 def main():
-    
-    
-    root = Tk()
+
+    root=Tk()      
     app = Prototype(root)
-    app.pack(expand=YES, fill=BOTH)
-    canvas = tk.Canvas(root, height=30, width=840, bg="grey")
-    canvas.pack()
-    font = ('courier', 12, 'bold')
-    text_width = 7
-    x = 1
-    y = 2
-    text = canvas.create_text(x, y, anchor='nw', text="lip reader", font=font)
+    app.pack(expand=YES, fill=BOTH)    
     
-    #dx = 1
-    #dy = 0 # use horizontal movement only
-# the pixel value depends on dx, font and length of text
-    #pixels = 9000
-    #for p in range(pixels):
-# move text object by increments dx, dy
-# -dx --> right to left
-     #canvas.move(text, -dx, dy)
-     #canvas.update()
-# shorter delay --> faster movement
-     #time.sleep(0.005)
-    #text=tk.Text(master=root,width=30,height=3).pack(side="top", padx=5, pady=5)
-   
     root.mainloop()  
 
 camera = cv2.VideoCapture()
 
+
+
 if __name__ == '__main__':
      main()
+
 

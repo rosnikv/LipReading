@@ -14,7 +14,7 @@ EIGENFACE_IMG_FMT = 'eigenface-%s.png'
 RECONPHI_FMT      = 'reconphi-%s.png'
 RECONX_FMT        = 'reconx-%s.png'
 USE_EIGH          = True
-MAKE_AVERAGE      = True
+MAKE_AVERAGE      = False
 
 
 class FaceBundle(object):
@@ -86,7 +86,7 @@ def find_matching_image(image, directory, threshold, egfnum=None, resize=True):
     #reconstruct_faces(bundle, egfnum, weights)
 
     if mindist < threshold:
-        return (mindist, join(directory, bundle.images_list[idx]))
+        return (mindist, bundle.images_list[idx])		#removed dir name
     else:
         return (None, None)
 
@@ -227,9 +227,8 @@ def validate_directory(images_list):
 #                    (bundle.width, bundle.height))
 # 
 # 
- def make_image(v, filename, size, scaled=True):
-#     """ Builds an image named `filename` of `size` dimensions
-#     that might be scaled """
+def make_image(v, filename, size, scaled=True):
+
      v.shape = (-1,) #change to 1 dim array
      im = Image.new('L', size)
      if scaled:
