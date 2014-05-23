@@ -1,0 +1,3 @@
+#!/bin/bash
+python mean.py  testdata/word out/ ;
+python pyfaces.py -i out/mean.png -d training_set;
